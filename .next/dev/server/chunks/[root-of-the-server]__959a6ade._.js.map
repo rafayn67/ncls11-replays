@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 46, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/user/Downloads/NCLS11/app/api/login/route.ts"],"sourcesContent":["import { NextResponse } from \"next/server\";\r\n\r\nexport async function POST(req: Request) {\r\n  const { password } = await req.json();\r\n\r\n  const STAFF_PASSWORD = \"supersecretstaffpassword\"; // CHANGE THIS\r\n\r\n  if (password !== STAFF_PASSWORD) {\r\n    return NextResponse.json({ success: false }, { status: 401 });\r\n  }\r\n\r\n  // Set staff cookie\r\n  // Set staff cookie on the response\r\n  const res = NextResponse.json({ success: true });\r\n  res.cookies.set(\"staff\", \"1\", {\r\n    httpOnly: true,\r\n    secure: true,\r\n    sameSite: \"strict\",\r\n    path: \"/\",\r\n    maxAge: 60 * 60 * 12, // 12 hours\r\n  });\r\n\r\n  return res;\r\n}"],"names":[],"mappings":";;;;AAAA;;AAEO,eAAe,KAAK,GAAY;IACrC,MAAM,EAAE,QAAQ,EAAE,GAAG,MAAM,IAAI,IAAI;IAEnC,MAAM,iBAAiB,4BAA4B,cAAc;IAEjE,IAAI,aAAa,gBAAgB;QAC/B,OAAO,gJAAY,CAAC,IAAI,CAAC;YAAE,SAAS;QAAM,GAAG;YAAE,QAAQ;QAAI;IAC7D;IAEA,mBAAmB;IACnB,mCAAmC;IACnC,MAAM,MAAM,gJAAY,CAAC,IAAI,CAAC;QAAE,SAAS;IAAK;IAC9C,IAAI,OAAO,CAAC,GAAG,CAAC,SAAS,KAAK;QAC5B,UAAU;QACV,QAAQ;QACR,UAAU;QACV,MAAM;QACN,QAAQ,KAAK,KAAK;IACpB;IAEA,OAAO;AACT"}}]
+}

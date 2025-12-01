@@ -1,0 +1,11 @@
+{
+  "/[division]/[week]/[file]/page": "app/[division]/[week]/[file]/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/admin/page": "app/admin/page.js",
+  "/api/login/route": "app/api/login/route.js",
+  "/api/replay/route": "app/api/replay/route.js",
+  "/api/replays/route": "app/api/replays/route.js",
+  "/division/[id]/page": "app/division/[id]/page.js",
+  "/division/[id]/week/[week]/page": "app/division/[id]/week/[week]/page.js",
+  "/page": "app/page.js"
+}

@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 46, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/user/Downloads/NCL/NCLS11/app/api/login/route.ts"],"sourcesContent":["import { NextResponse } from \"next/server\";\r\n\r\n\r\nexport async function POST(req: Request) {\r\n  const { password } = await req.json();\r\n\r\n  const STAFF_PASSWORD = process.env.STAFF_PASSWORD;\r\n\r\n  if (password === STAFF_PASSWORD) {\r\n    return NextResponse.json({ success: true });\r\n  }\r\n\r\n  return NextResponse.json({ success: false }, { status: 401 });\r\n}\r\n"],"names":[],"mappings":";;;;AAAA;;AAGO,eAAe,KAAK,GAAY;IACrC,MAAM,EAAE,QAAQ,EAAE,GAAG,MAAM,IAAI,IAAI;IAEnC,MAAM,iBAAiB,QAAQ,GAAG,CAAC,cAAc;IAEjD,IAAI,aAAa,gBAAgB;QAC/B,OAAO,iKAAY,CAAC,IAAI,CAAC;YAAE,SAAS;QAAK;IAC3C;IAEA,OAAO,iKAAY,CAAC,IAAI,CAAC;QAAE,SAAS;IAAM,GAAG;QAAE,QAAQ;IAAI;AAC7D"}}]
+}

@@ -1,0 +1,33 @@
+{
+  "dependencies": {
+    "@supabase/auth-helpers-nextjs": "^0.15.0",
+    "@tailwindcss/cli": "^4.1.17",
+    "@tailwindcss/postcss": "^4.1.17",
+    "formidable": "^3.5.4",
+    "next": "^16.0.5",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@types/formidable": "^3.4.6",
+    "@types/react": "^19.2.7",
+    "autoprefixer": "^10.4.22",
+    "baseline-browser-mapping": "^2.8.32",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.10",
+    "typescript": "5.9.3"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "name": "ncls11",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}

@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 14, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/user/Downloads/NCLS11/app/division/%5Bid%5D/page.tsx"],"sourcesContent":["export default function DivisionPage({ params }: { params: { id: string } }) {\r\n  const id = params.id;\r\n\r\n  return (\r\n    <div style={{ padding: 40 }}>\r\n      <h1>Division {id}</h1>\r\n\r\n      {Array.from({ length: 9 }, (_, i) => i + 1).map(week => (\r\n        <div key={week}>\r\n          <a href={`/division/${id}/week/${week}`}>Week {week}</a>\r\n        </div>\r\n      ))}\r\n    </div>\r\n  );\r\n}"],"names":[],"mappings":";;;;;;AAAe,SAAS,aAAa,EAAE,MAAM,EAA8B;IACzE,MAAM,KAAK,OAAO,EAAE;IAEpB,qBACE,8OAAC;QAAI,OAAO;YAAE,SAAS;QAAG;;0BACxB,8OAAC;;oBAAG;oBAAU;;;;;;;YAEb,MAAM,IAAI,CAAC;gBAAE,QAAQ;YAAE,GAAG,CAAC,GAAG,IAAM,IAAI,GAAG,GAAG,CAAC,CAAA,qBAC9C,8OAAC;8BACC,cAAA,8OAAC;wBAAE,MAAM,CAAC,UAAU,EAAE,GAAG,MAAM,EAAE,MAAM;;4BAAE;4BAAM;;;;;;;mBADvC;;;;;;;;;;;AAMlB"}}]
+}
