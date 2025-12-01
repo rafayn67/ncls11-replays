@@ -3,6 +3,7 @@
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { teamsByDivision } from "@/app/admin/UploadReplay";
 
 export default function WeekPage() {
   const params = useParams();
@@ -60,11 +61,9 @@ export default function WeekPage() {
             <Link
               key={file}
               href={`/d${division}/w${week}/${file}`}
-              className="flex justify-between px-10 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold p-3 rounded-lg shadow-md text-center transition-transform transform hover:-translate-y-0.5"
+              className="flex justify-center px-10 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold p-3 rounded-lg shadow-md text-center transition-transform transform hover:-translate-y-0.5"
             >
-              <span>{file.slice(0, 3)}</span>
-              <span>vs</span>
-              <span>{file.slice(-3)}</span>
+              {teamsByDivision[Number(division) as 1 | 2 | 3].find(t => t.abv === file.slice(0, 3))?.name} vs {teamsByDivision[Number(division) as 1 | 2 | 3].find(t => t.abv === file.slice(-3))?.name}
             </Link>
           ))}
         </div>

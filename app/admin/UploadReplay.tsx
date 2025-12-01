@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { supabase } from "@/lib/supabaseClient";
 import { useRouter } from "next/navigation";
 
-const teamsByDivision: Record<1 | 2 | 3, { name: string; abv: string }[]> = {
+export const teamsByDivision: Record<1 | 2 | 3, { name: string; abv: string }[]> = {
   1: [
     { name: "Robert", abv: "DTD" },
     { name: "James", abv: "SHJ" },
@@ -85,11 +85,16 @@ const filename2 = `${team2}vs${team1}.html`;
 
   if (alreadyExists) {
     const ok = confirm(
-      `A replay for this battle already exists.\n\nOverwrite it?`
+      `A replay for this battle already exists. \n\nOverwrite it?`
     );
     if (!ok) return;
 
     await supabase.storage.from("replays").remove([path]);
+  }
+
+  if (team1 == team2) {
+    alert("Bruh you can't do that.");
+    return;
   }
 
   const { error } = await supabase.storage
@@ -166,7 +171,7 @@ const filename2 = `${team2}vs${team1}.html`;
               >
                 {teamsByDivision[division].map((team) => (
                   <option key={team.abv} value={team.abv}>
-                    {team.abv} - {team.name}
+                    {team.name}
                   </option>
                 ))}
               </select>
@@ -181,7 +186,7 @@ const filename2 = `${team2}vs${team1}.html`;
               >
                 {teamsByDivision[division].map((team) => (
                   <option key={team.abv} value={team.abv}>
-                    {team.abv} - {team.name}
+                    {team.name}
                   </option>
                 ))}
               </select>

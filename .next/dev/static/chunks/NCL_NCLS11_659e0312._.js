@@ -19,7 +19,9 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 
 __turbopack_context__.s([
     "default",
-    ()=>__TURBOPACK__default__export__
+    ()=>__TURBOPACK__default__export__,
+    "teamsByDivision",
+    ()=>teamsByDivision
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$NCL$2f$NCLS11$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/NCL/NCLS11/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$NCL$2f$NCLS11$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/NCL/NCLS11/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
@@ -208,11 +210,15 @@ const UploadReplay = ()=>{
         });
         const alreadyExists = existsData1 && existsData1.length > 0 || existsData2 && existsData2.length > 0;
         if (alreadyExists) {
-            const ok = confirm(`A replay for this battle already exists.\n\nOverwrite it?`);
+            const ok = confirm(`A replay for this battle already exists. \n\nOverwrite it?`);
             if (!ok) return;
             await __TURBOPACK__imported__module__$5b$project$5d2f$NCL$2f$NCLS11$2f$lib$2f$supabaseClient$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["supabase"].storage.from("replays").remove([
                 path
             ]);
+        }
+        if (team1 == team2) {
+            alert("Bruh you can't do that.");
+            return;
         }
         const { error } = await __TURBOPACK__imported__module__$5b$project$5d2f$NCL$2f$NCLS11$2f$lib$2f$supabaseClient$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["supabase"].storage.from("replays").upload(path, file, {
             cacheControl: "3600",
@@ -235,12 +241,12 @@ const UploadReplay = ()=>{
                     children: "Back"
                 }, void 0, false, {
                     fileName: "[project]/NCL/NCLS11/app/admin/UploadReplay.tsx",
-                    lineNumber: 117,
+                    lineNumber: 122,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/NCL/NCLS11/app/admin/UploadReplay.tsx",
-                lineNumber: 116,
+                lineNumber: 121,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$NCL$2f$NCLS11$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -251,7 +257,7 @@ const UploadReplay = ()=>{
                         children: "Upload Replay"
                     }, void 0, false, {
                         fileName: "[project]/NCL/NCLS11/app/admin/UploadReplay.tsx",
-                        lineNumber: 125,
+                        lineNumber: 130,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$NCL$2f$NCLS11$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -282,18 +288,18 @@ const UploadReplay = ()=>{
                                                 ]
                                             }, d, true, {
                                                 fileName: "[project]/NCL/NCLS11/app/admin/UploadReplay.tsx",
-                                                lineNumber: 140,
+                                                lineNumber: 145,
                                                 columnNumber: 19
                                             }, ("TURBOPACK compile-time value", void 0)))
                                     }, void 0, false, {
                                         fileName: "[project]/NCL/NCLS11/app/admin/UploadReplay.tsx",
-                                        lineNumber: 129,
+                                        lineNumber: 134,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/NCL/NCLS11/app/admin/UploadReplay.tsx",
-                                lineNumber: 127,
+                                lineNumber: 132,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$NCL$2f$NCLS11$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -319,24 +325,24 @@ const UploadReplay = ()=>{
                                                 children: w
                                             }, w, false, {
                                                 fileName: "[project]/NCL/NCLS11/app/admin/UploadReplay.tsx",
-                                                lineNumber: 153,
+                                                lineNumber: 158,
                                                 columnNumber: 19
                                             }, ("TURBOPACK compile-time value", void 0)))
                                     }, void 0, false, {
                                         fileName: "[project]/NCL/NCLS11/app/admin/UploadReplay.tsx",
-                                        lineNumber: 147,
+                                        lineNumber: 152,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/NCL/NCLS11/app/admin/UploadReplay.tsx",
-                                lineNumber: 145,
+                                lineNumber: 150,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/NCL/NCLS11/app/admin/UploadReplay.tsx",
-                        lineNumber: 126,
+                        lineNumber: 131,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$NCL$2f$NCLS11$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -352,25 +358,21 @@ const UploadReplay = ()=>{
                                         className: "w-full mt-1 p-3 rounded-lg text-gray-900 font-medium focus:outline-none focus:ring-2 focus:ring-indigo-400",
                                         children: teamsByDivision[division].map((team)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$NCL$2f$NCLS11$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
                                                 value: team.abv,
-                                                children: [
-                                                    team.abv,
-                                                    " - ",
-                                                    team.name
-                                                ]
-                                            }, team.abv, true, {
+                                                children: team.name
+                                            }, team.abv, false, {
                                                 fileName: "[project]/NCL/NCLS11/app/admin/UploadReplay.tsx",
-                                                lineNumber: 168,
+                                                lineNumber: 173,
                                                 columnNumber: 19
                                             }, ("TURBOPACK compile-time value", void 0)))
                                     }, void 0, false, {
                                         fileName: "[project]/NCL/NCLS11/app/admin/UploadReplay.tsx",
-                                        lineNumber: 162,
+                                        lineNumber: 167,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/NCL/NCLS11/app/admin/UploadReplay.tsx",
-                                lineNumber: 160,
+                                lineNumber: 165,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$NCL$2f$NCLS11$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -383,31 +385,27 @@ const UploadReplay = ()=>{
                                         className: "w-full mt-1 p-3 rounded-lg text-gray-900 font-medium focus:outline-none focus:ring-2 focus:ring-indigo-400",
                                         children: teamsByDivision[division].map((team)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$NCL$2f$NCLS11$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
                                                 value: team.abv,
-                                                children: [
-                                                    team.abv,
-                                                    " - ",
-                                                    team.name
-                                                ]
-                                            }, team.abv, true, {
+                                                children: team.name
+                                            }, team.abv, false, {
                                                 fileName: "[project]/NCL/NCLS11/app/admin/UploadReplay.tsx",
-                                                lineNumber: 183,
+                                                lineNumber: 188,
                                                 columnNumber: 19
                                             }, ("TURBOPACK compile-time value", void 0)))
                                     }, void 0, false, {
                                         fileName: "[project]/NCL/NCLS11/app/admin/UploadReplay.tsx",
-                                        lineNumber: 177,
+                                        lineNumber: 182,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/NCL/NCLS11/app/admin/UploadReplay.tsx",
-                                lineNumber: 175,
+                                lineNumber: 180,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/NCL/NCLS11/app/admin/UploadReplay.tsx",
-                        lineNumber: 159,
+                        lineNumber: 164,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$NCL$2f$NCLS11$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -417,7 +415,7 @@ const UploadReplay = ()=>{
                         className: "flex justify-center mb-6 text-white font-bold"
                     }, void 0, false, {
                         fileName: "[project]/NCL/NCLS11/app/admin/UploadReplay.tsx",
-                        lineNumber: 191,
+                        lineNumber: 196,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$NCL$2f$NCLS11$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -426,13 +424,13 @@ const UploadReplay = ()=>{
                         children: "Upload Replay"
                     }, void 0, false, {
                         fileName: "[project]/NCL/NCLS11/app/admin/UploadReplay.tsx",
-                        lineNumber: 200,
+                        lineNumber: 205,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/NCL/NCLS11/app/admin/UploadReplay.tsx",
-                lineNumber: 124,
+                lineNumber: 129,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$NCL$2f$NCLS11$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -446,18 +444,18 @@ const UploadReplay = ()=>{
                     children: "Sign Out"
                 }, void 0, false, {
                     fileName: "[project]/NCL/NCLS11/app/admin/UploadReplay.tsx",
-                    lineNumber: 208,
+                    lineNumber: 213,
                     columnNumber: 3
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/NCL/NCLS11/app/admin/UploadReplay.tsx",
-                lineNumber: 207,
+                lineNumber: 212,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/NCL/NCLS11/app/admin/UploadReplay.tsx",
-        lineNumber: 115,
+        lineNumber: 120,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
