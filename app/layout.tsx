@@ -4,7 +4,7 @@ export const metadata = {
   title: "NCL S11 Replays",
   description: "View NCL Season 11 Replays",
   icons: {
-    icon: "/favicon.png",
+    icon: "/NCLDesign2025.png"
   }
 
 };

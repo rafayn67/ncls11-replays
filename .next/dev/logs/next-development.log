@@ -1,51 +1,318 @@
-[00:00:01.614] Server  LOG      ✓ Ready in 1084ms
-[00:00:10.592] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:28.969] Server  LOG     DIVISION: "1" "WEEK:" "1"
-[00:00:29.299] Server  LOG     SUPABASE ERROR: null
-[00:00:29.302] Server  LOG     SUPABASE DATA: [{...},{...},{...},{...},{...}]
-[00:00:29.324] Server  LOG     DIVISION: "1" "WEEK:" "1"
-[00:00:29.925] Server  LOG     SUPABASE ERROR: null
-[00:00:29.932] Server  LOG     SUPABASE DATA: [{...},{...},{...},{...},{...}]
-[00:00:47.423] Server  LOG     DIVISION: "1" "WEEK:" "2"
-[00:00:47.739] Server  LOG     SUPABASE ERROR: null
-[00:00:47.739] Server  LOG     SUPABASE DATA: []
-[00:00:47.754] Server  LOG     DIVISION: "1" "WEEK:" "2"
-[00:00:48.091] Server  LOG     SUPABASE ERROR: null
-[00:00:48.091] Server  LOG     SUPABASE DATA: []
-[00:00:49.508] Server  LOG     DIVISION: "1" "WEEK:" "4"
-[00:00:49.629] Server  LOG     SUPABASE ERROR: null
-[00:00:49.629] Server  LOG     SUPABASE DATA: []
-[00:00:49.641] Server  LOG     DIVISION: "1" "WEEK:" "4"
-[00:00:49.769] Server  LOG     SUPABASE ERROR: null
-[00:00:49.770] Server  LOG     SUPABASE DATA: []
-[00:00:52.636] Server  LOG     DIVISION: "1" "WEEK:" "1"
-[00:00:52.748] Server  LOG     SUPABASE ERROR: null
-[00:00:52.750] Server  LOG     SUPABASE DATA: [{...},{...},{...},{...},{...}]
-[00:00:52.764] Server  LOG     DIVISION: "1" "WEEK:" "1"
-[00:00:52.895] Server  LOG     SUPABASE ERROR: null
-[00:00:52.896] Server  LOG     SUPABASE DATA: [{...},{...},{...},{...},{...}]
-[00:01:21.322] Server  LOG      ✓ Compiled in 59ms
-[00:01:31.156] Server  LOG      ✓ Compiled in 57ms
-[00:01:35.390] Server  LOG      ✓ Compiled in 63ms
-[00:01:57.631] Server  LOG      ✓ Compiled in 54ms
-[00:02:34.578] Server  LOG      ✓ Compiled in 76ms
-[00:02:48.590] Server  LOG      ✓ Compiled in 44ms
-[00:03:07.690] Server  LOG      ✓ Compiled in 56ms
-[00:03:15.155] Server  LOG      ✓ Compiled in 46ms
-[00:03:24.289] Server  LOG      ✓ Compiled in 46ms
-[00:03:45.444] Server  LOG     DIVISION: "1" "WEEK:" "1"
-[00:03:45.772] Server  LOG     SUPABASE ERROR: null
-[00:03:45.773] Server  LOG     SUPABASE DATA: [{...},{...},{...},{...},{...}]
-[00:03:45.786] Server  LOG     DIVISION: "1" "WEEK:" "1"
-[00:03:45.960] Server  LOG     SUPABASE ERROR: null
-[00:03:45.962] Server  LOG     SUPABASE DATA: [{...},{...},{...},{...},{...}]
-[00:04:06.189] Server  LOG      ✓ Compiled in 55ms
-[00:04:08.622] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:04:16.037] Server  LOG      ✓ Compiled in 49ms
-[00:04:25.175] Server  LOG      ✓ Compiled in 39ms
-[00:04:31.980] Server  LOG      ✓ Compiled in 42ms
-[00:04:57.046] Server  LOG      ✓ Compiled in 43ms
-[00:05:05.491] Server  LOG      ✓ Compiled in 43ms
-[00:05:33.283] Server  LOG      ✓ Compiled in 54ms
-[00:05:36.973] Server  LOG      ✓ Compiled in 40ms
-[00:06:45.285] Server  LOG      ✓ Compiled in 57ms
+[00:00:02.824] Server  LOG      ✓ Ready in 1930ms
+[00:00:07.687] Server  LOG      ○ Compiling / ...
+[00:00:09.344] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:15.480] Server  LOG     DIVISION: "1" "WEEK:" "1"
+[00:00:15.891] Server  LOG     SUPABASE ERROR: null
+[00:00:15.909] Server  LOG     SUPABASE DATA: [{...},{...},{...},{...},{...},{...}]
+[00:00:15.952] Server  LOG     DIVISION: "1" "WEEK:" "1"
+[00:00:16.074] Server  LOG     SUPABASE ERROR: null
+[00:00:16.080] Server  LOG     SUPABASE DATA: [{...},{...},{...},{...},{...},{...}]
+[00:00:19.685] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:21.311] Browser ERROR   uncaughtError: Error: Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
+1. You might have mismatching versions of React and the renderer (such as React DOM)
+2. You might be breaking the Rules of Hooks
+3. You might have more than one copy of React in the same app
+See https://react.dev/link/invalid-hook-call for tips about how to debug and fix this problem.
+[00:01:28.133] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:01:28.133] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./NCL/NCLS11/app/admin/UploadReplay.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:01:28.134] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:01:28.420] Server  LOG      ✓ Compiled in 94ms
+[00:01:28.606] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:29.081] Browser ERROR   uncaughtError: TypeError: Cannot read properties of undefined (reading 'abv')
+[00:02:13.804] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:02:14.076] Server  LOG      ✓ Compiled in 52ms
+[00:02:14.307] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:03:18.034] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:03:20.260] Server  LOG     DIVISION: "1" "WEEK:" "1"
+[00:03:20.517] Server  LOG     SUPABASE ERROR: null
+[00:03:20.519] Server  LOG     SUPABASE DATA: [{...},{...},{...},{...},{...},{...}]
+[00:03:20.545] Server  LOG     DIVISION: "1" "WEEK:" "1"
+[00:03:20.659] Server  LOG     SUPABASE ERROR: null
+[00:03:20.661] Server  LOG     SUPABASE DATA: [{...},{...},{...},{...},{...},{...}]
+[00:03:56.596] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:03:56.642] Server  LOG     DIVISION: "1" "WEEK:" "1"
+[00:03:56.974] Server  LOG     SUPABASE ERROR: null
+[00:03:56.975] Server  LOG     SUPABASE DATA: [{...},{...},{...},{...},{...},{...}]
+[00:03:57.719] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:04:34.412] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:07:09.982] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:07:10.896] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:08:31.726] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:08:33.077] Server  LOG     DIVISION: "1" "WEEK:" "1"
+[00:08:33.633] Server  LOG     SUPABASE ERROR: null
+[00:08:33.635] Server  LOG     SUPABASE DATA: [{...},{...},{...},{...},{...},{...}]
+[00:08:33.653] Server  LOG     DIVISION: "1" "WEEK:" "1"
+[00:08:33.782] Server  LOG     SUPABASE ERROR: null
+[00:08:33.783] Server  LOG     SUPABASE DATA: [{...},{...},{...},{...},{...},{...}]
+[00:15:15.868] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:15:18.133] Server  LOG     DIVISION: "2" "WEEK:" "1"
+[00:15:18.525] Server  LOG     SUPABASE ERROR: null
+[00:15:18.527] Server  LOG     SUPABASE DATA: [{...},{...},{...},{...},{...},{...},{...}]
+[00:15:18.547] Server  LOG     DIVISION: "2" "WEEK:" "1"
+[00:15:18.657] Server  LOG     SUPABASE ERROR: null
+[00:15:18.660] Server  LOG     SUPABASE DATA: [{...},{...},{...},{...},{...},{...},{...}]
+[00:17:05.276] Server  LOG     DIVISION: "2" "WEEK:" "3"
+[00:17:05.730] Server  LOG     SUPABASE ERROR: null
+[00:17:05.730] Server  LOG     SUPABASE DATA: []
+[00:17:05.744] Server  LOG     DIVISION: "2" "WEEK:" "3"
+[00:17:06.377] Server  LOG     SUPABASE ERROR: null
+[00:17:06.378] Server  LOG     SUPABASE DATA: []
+[00:17:08.280] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:17:11.896] Server  LOG     DIVISION: "3" "WEEK:" "3"
+[00:17:12.182] Server  LOG     SUPABASE ERROR: null
+[00:17:12.183] Server  LOG     SUPABASE DATA: []
+[00:17:12.195] Server  LOG     DIVISION: "3" "WEEK:" "3"
+[00:17:12.317] Server  LOG     SUPABASE ERROR: null
+[00:17:12.318] Server  LOG     SUPABASE DATA: []
+[00:17:13.658] Server  LOG     DIVISION: "3" "WEEK:" "1"
+[00:17:13.803] Server  LOG     SUPABASE ERROR: null
+[00:17:13.805] Server  LOG     SUPABASE DATA: [{...},{...},{...},{...},{...},{...}]
+[00:17:13.823] Server  LOG     DIVISION: "3" "WEEK:" "1"
+[00:17:14.005] Server  LOG     SUPABASE ERROR: null
+[00:17:14.008] Server  LOG     SUPABASE DATA: [{...},{...},{...},{...},{...},{...}]
+[00:21:18.773] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:21:30.549] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:21:52.810] Server  LOG      ✓ Compiled in 106ms
+[00:21:53.439] Browser ERROR   {"code":"42703","details":null,"hint":null,"message":"column matchups.team1_abv does not exist"}
+[00:22:10.471] Browser ERROR   {"code":"42703","details":null,"hint":null,"message":"column matchups.team1_abv does not exist"}
+[00:22:36.146] Server  LOG      ✓ Compiled in 66ms
+[00:22:37.767] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:22:38.110] Browser ERROR   error
+[00:22:38.110] Browser ERROR   error
+[00:22:42.859] Server  LOG      ✓ Compiled in 77ms
+[00:22:44.314] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:22:44.652] Browser ERROR   {"code":"42703","details":null,"hint":null,"message":"column matchups.team1_abv does not exist"}
+[00:22:44.652] Browser ERROR   {"code":"42703","details":null,"hint":null,"message":"column matchups.team1_abv does not exist"}
+[00:23:25.686] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:23:26.229] Browser ERROR   {"code":"42703","details":null,"hint":null,"message":"column matchups.team1_abv does not exist"}
+[00:23:26.229] Browser ERROR   {"code":"42703","details":null,"hint":null,"message":"column matchups.team1_abv does not exist"}
+[00:23:31.129] Server  LOG      ✓ Compiled in 95ms
+[00:23:31.383] Browser ERROR   ./NCL/NCLS11/app/admin/page.tsx:4:1
+Export default doesn't exist in target module
+  2 |
+  3 | import React, { useState, useEffect } from "react";
+> 4 | import UploadReplay from "./UploadReplay";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { useRouter } from "next/navigation";
+  6 |
+  7 | export default function UploadPage() {
+
+The export default was not found in module [project]/NCL/NCLS11/app/admin/UploadReplay.tsx [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./NCL/NCLS11/app/admin/page.tsx [Client Component Browser]
+    ./NCL/NCLS11/app/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./NCL/NCLS11/app/admin/page.tsx [Client Component SSR]
+    ./NCL/NCLS11/app/admin/page.tsx [Server Component]
+[00:23:31.383] Browser ERROR   ./NCL/NCLS11/app/admin/page.tsx:4:1
+Export default doesn't exist in target module
+  2 |
+  3 | import React, { useState, useEffect } from "react";
+> 4 | import UploadReplay from "./UploadReplay";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { useRouter } from "next/navigation";
+  6 |
+  7 | export default function UploadPage() {
+
+The export default was not found in module [project]/NCL/NCLS11/app/admin/UploadReplay.tsx [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./NCL/NCLS11/app/admin/page.tsx [Client Component Browser]
+    ./NCL/NCLS11/app/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./NCL/NCLS11/app/admin/page.tsx [Client Component SSR]
+    ./NCL/NCLS11/app/admin/page.tsx [Server Component]
+[00:23:35.657] Browser ERROR   {"code":"42703","details":null,"hint":null,"message":"column matchups.team1_abv does not exist"}
+[00:24:11.989] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:24:12.881] Browser ERROR   {"code":"42703","details":null,"hint":null,"message":"column matchups.team1_abv does not exist"}
+[00:24:13.046] Browser ERROR   {"code":"42703","details":null,"hint":null,"message":"column matchups.team1_abv does not exist"}
+[00:24:14.361] Browser ERROR   {"code":"42703","details":null,"hint":null,"message":"column matchups.team1_abv does not exist"}
+[00:24:15.345] Browser ERROR   {"code":"42703","details":null,"hint":null,"message":"column matchups.team1_abv does not exist"}
+[00:24:54.976] Server  LOG      ✓ Compiled in 63ms
+[00:24:57.786] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:24:58.299] Browser LOG     Data: null Error: {"code":"PGRST116","details":"The result contains 0 rows","hint":null,"message":"Cannot coerce the result to a single JSON object"}
+[00:24:58.299] Browser WARN    No data returned. Likely due to RLS.
+[00:24:58.427] Browser LOG     Data: null Error: {"code":"PGRST116","details":"The result contains 0 rows","hint":null,"message":"Cannot coerce the result to a single JSON object"}
+[00:24:58.427] Browser WARN    No data returned. Likely due to RLS.
+[00:25:18.406] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:25:18.787] Browser LOG     Data: null Error: {"code":"PGRST116","details":"The result contains 0 rows","hint":null,"message":"Cannot coerce the result to a single JSON object"}
+[00:25:18.787] Browser WARN    No data returned. Likely due to RLS.
+[00:25:18.902] Browser LOG     Data: null Error: {"code":"PGRST116","details":"The result contains 0 rows","hint":null,"message":"Cannot coerce the result to a single JSON object"}
+[00:25:18.902] Browser WARN    No data returned. Likely due to RLS.
+[00:25:24.152] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:25:24.455] Browser LOG     Data: null Error: {"code":"PGRST116","details":"The result contains 6 rows","hint":null,"message":"Cannot coerce the result to a single JSON object"}
+[00:25:24.455] Browser WARN    No data returned. Likely due to RLS.
+[00:25:24.455] Browser LOG     Data: null Error: {"code":"PGRST116","details":"The result contains 6 rows","hint":null,"message":"Cannot coerce the result to a single JSON object"}
+[00:25:24.455] Browser WARN    No data returned. Likely due to RLS.
+[00:25:25.570] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:25:25.805] Browser LOG     Data: null Error: {"code":"PGRST116","details":"The result contains 6 rows","hint":null,"message":"Cannot coerce the result to a single JSON object"}
+[00:25:25.805] Browser WARN    No data returned. Likely due to RLS.
+[00:25:25.805] Browser LOG     Data: null Error: {"code":"PGRST116","details":"The result contains 6 rows","hint":null,"message":"Cannot coerce the result to a single JSON object"}
+[00:25:25.805] Browser WARN    No data returned. Likely due to RLS.
+[00:25:26.043] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:25:26.366] Browser LOG     Data: null Error: {"code":"PGRST116","details":"The result contains 6 rows","hint":null,"message":"Cannot coerce the result to a single JSON object"}
+[00:25:26.366] Browser WARN    No data returned. Likely due to RLS.
+[00:25:26.366] Browser LOG     Data: null Error: {"code":"PGRST116","details":"The result contains 6 rows","hint":null,"message":"Cannot coerce the result to a single JSON object"}
+[00:25:26.366] Browser WARN    No data returned. Likely due to RLS.
+[00:25:55.573] Server  LOG      ✓ Compiled in 46ms
+[00:25:59.096] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:25:59.595] Browser ERROR   {"code":"42703","details":null,"hint":null,"message":"column matchups.team1_abv does not exist"}
+[00:25:59.751] Browser ERROR   {"code":"42703","details":null,"hint":null,"message":"column matchups.team1_abv does not exist"}
+[00:26:43.215] Browser ERROR   {"code":"42703","details":null,"hint":null,"message":"column matchups.team1_abv does not exist"}
+[00:26:45.344] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:26:47.639] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:26:48.622] Browser ERROR   {"code":"42703","details":null,"hint":null,"message":"column matchups.team1_abv does not exist"}
+[00:26:48.773] Browser ERROR   {"code":"42703","details":null,"hint":null,"message":"column matchups.team1_abv does not exist"}
+[00:27:32.311] Server  LOG      ✓ Compiled in 63ms
+[00:27:34.221] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:28:36.329] Server  LOG      ✓ Compiled in 73ms
+[00:28:37.980] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:28:38.479] Browser ERROR   {"code":"42703","details":null,"hint":null,"message":"column matchups.team1_abv does not exist"}
+[00:28:38.479] Browser ERROR   {"code":"42703","details":null,"hint":null,"message":"column matchups.team1_abv does not exist"}
+[00:29:19.034] Server  LOG      ✓ Compiled in 53ms
+[00:32:16.077] Server  LOG      ✓ Compiled in 57ms
+[00:32:20.027] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:34:00.542] Server  LOG      ✓ Compiled in 73ms
+[00:34:15.188] Server  LOG      ✓ Compiled in 48ms
+[00:34:46.861] Server  LOG      ✓ Compiled in 64ms
+[00:34:51.437] Server  LOG      ✓ Compiled in 61ms
+[00:35:04.310] Server  LOG      ✓ Compiled in 59ms
+[00:38:49.378] Server  LOG      ✓ Compiled in 46ms
+[00:38:52.808] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:38:59.257] Server  LOG      ✓ Compiled in 55ms
+[00:39:07.571] Server  LOG      ✓ Compiled in 69ms
+[00:39:09.378] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:39:21.726] Server  LOG      ✓ Compiled in 45ms
+[00:40:29.732] Server  LOG      ✓ Compiled in 44ms
+[00:40:46.418] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:40:48.329] Server  LOG     DIVISION: "2" "WEEK:" "2"
+[00:40:48.580] Server  LOG     SUPABASE ERROR: null
+[00:40:48.581] Server  LOG     SUPABASE DATA: [{...}]
+[00:40:48.592] Server  LOG     DIVISION: "2" "WEEK:" "2"
+[00:40:48.667] Server  LOG     SUPABASE ERROR: null
+[00:40:48.668] Server  LOG     SUPABASE DATA: [{...}]
+[00:40:54.548] Server  LOG     DIVISION: "2" "WEEK:" "2"
+[00:40:54.819] Server  LOG     SUPABASE ERROR: null
+[00:40:54.820] Server  LOG     SUPABASE DATA: [{...}]
+[00:40:54.832] Server  LOG     DIVISION: "2" "WEEK:" "2"
+[00:40:54.934] Server  LOG     SUPABASE ERROR: null
+[00:40:54.934] Server  LOG     SUPABASE DATA: [{...}]
+[00:41:22.862] Server  LOG     DIVISION: "2" "WEEK:" "2"
+[00:41:23.167] Server  LOG     SUPABASE ERROR: null
+[00:41:23.168] Server  LOG     SUPABASE DATA: [{...}]
+[00:41:23.178] Server  LOG     DIVISION: "2" "WEEK:" "2"
+[00:41:23.284] Server  LOG     SUPABASE ERROR: null
+[00:41:23.285] Server  LOG     SUPABASE DATA: [{...}]
+[00:41:25.746] Server  LOG     DIVISION: "2" "WEEK:" "2"
+[00:41:25.844] Server  LOG     SUPABASE ERROR: null
+[00:41:25.846] Server  LOG     SUPABASE DATA: [{...}]
+[00:41:25.865] Server  LOG     DIVISION: "2" "WEEK:" "2"
+[00:41:25.989] Server  LOG     SUPABASE ERROR: null
+[00:41:25.991] Server  LOG     SUPABASE DATA: [{...}]
+[00:41:28.205] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:41:30.253] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:41:38.255] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:41:41.752] Server  LOG     DIVISION: "2" "WEEK:" "2"
+[00:41:41.919] Server  LOG     SUPABASE ERROR: null
+[00:41:41.920] Server  LOG     SUPABASE DATA: [{...}]
+[00:41:41.932] Server  LOG     DIVISION: "2" "WEEK:" "2"
+[00:41:42.044] Server  LOG     SUPABASE ERROR: null
+[00:41:42.045] Server  LOG     SUPABASE DATA: [{...}]
+[00:41:47.086] Server  LOG     DIVISION: "2" "WEEK:" "2"
+[00:41:47.193] Server  LOG     SUPABASE ERROR: null
+[00:41:47.194] Server  LOG     SUPABASE DATA: [{...}]
+[00:41:47.207] Server  LOG     DIVISION: "2" "WEEK:" "2"
+[00:41:47.325] Server  LOG     SUPABASE ERROR: null
+[00:41:47.326] Server  LOG     SUPABASE DATA: [{...}]
+[00:41:48.376] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:44:41.721] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:44:51.841] Server  LOG      ✓ Compiled in 43ms
+[00:44:54.368] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:49:40.570] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:49:52.338] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:49:54.345] Server  LOG     DIVISION: "1" "WEEK:" "1"
+[00:49:54.678] Server  LOG     SUPABASE ERROR: null
+[00:49:54.680] Server  LOG     SUPABASE DATA: [{...},{...},{...},{...},{...},{...}]
+[00:49:54.698] Server  LOG     DIVISION: "1" "WEEK:" "1"
+[00:49:54.858] Server  LOG     SUPABASE ERROR: null
+[00:49:54.860] Server  LOG     SUPABASE DATA: [{...},{...},{...},{...},{...},{...}]
+[00:51:13.305] Server  LOG      ✓ Compiled in 44ms
+[00:51:17.129] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:52:48.425] Server  LOG      ✓ Compiled in 67ms
+[00:53:02.851] Server  LOG      ✓ Compiled in 62ms
+[00:54:17.513] Server  LOG      ✓ Compiled in 61ms
+[00:54:18.441] Browser ERROR   React has detected a change in the order of Hooks called by %s. This will lead to bugs and errors if not fixed. For more information, read the Rules of Hooks: https://react.dev/link/rules-of-hooks
+
+   Previous render            Next render
+   ------------------------------------------------------
+%s   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ WeekPage 1. useContext                 useContext
+2. useState                   useState
+3. useState                   useState
+4. useState                   useState
+5. useEffect                  useEffect
+6. undefined                  useState
+
+[00:54:18.442] Browser ERROR   uncaughtError: Error: Rendered more hooks than during the previous render.
+[00:54:23.504] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:54:23.518] Server  LOG      ✓ Compiled in 43ms
+[00:54:23.844] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:54:24.623] Server  LOG      ✓ Compiled in 76ms
+[00:54:25.437] Browser ERROR   React has detected a change in the order of Hooks called by %s. This will lead to bugs and errors if not fixed. For more information, read the Rules of Hooks: https://react.dev/link/rules-of-hooks
+
+   Previous render            Next render
+   ------------------------------------------------------
+%s   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ WeekPage 1. useContext                 useContext
+2. useState                   useState
+3. useState                   useState
+4. useState                   useState
+5. useEffect                  useEffect
+6. undefined                  useState
+
+[00:54:25.437] Browser ERROR   uncaughtError: Error: Rendered more hooks than during the previous render.
+[00:54:27.570] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:54:27.583] Server  LOG      ✓ Compiled in 61ms
+[00:54:27.883] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:54:58.411] Server  LOG      ✓ Compiled in 44ms
+[00:55:06.567] Server  LOG      ✓ Compiled in 43ms
+[00:55:07.876] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:55:09.637] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:55:19.818] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:55:21.233] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:55:48.713] Server  LOG      ✓ Compiled in 57ms
+[00:56:16.367] Server  LOG      ✓ Compiled in 60ms
+[00:56:16.447] Browser ERROR   React has detected a change in the order of Hooks called by %s. This will lead to bugs and errors if not fixed. For more information, read the Rules of Hooks: https://react.dev/link/rules-of-hooks
+
+   Previous render            Next render
+   ------------------------------------------------------
+%s   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ WeekPage 1. useContext                 useContext
+2. useState                   useState
+3. useState                   useState
+4. useState                   useState
+5. useEffect                  useEffect
+6. undefined                  useState
+
+[00:56:16.447] Browser ERROR   uncaughtError: Error: Rendered more hooks than during the previous render.
+[00:56:30.886] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:56:31.408] Server  LOG      ✓ Compiled in 56ms
+[00:56:31.633] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:57:53.568] Server  LOG      ✓ Compiled in 50ms
+[01:01:04.654] Server  LOG      ✓ Compiled in 50ms
+[01:01:54.068] Server  LOG      ✓ Compiled in 54ms
+[01:02:16.113] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:03:43.131] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:03:45.861] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:04:33.988] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:05:07.011] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:05:20.213] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold

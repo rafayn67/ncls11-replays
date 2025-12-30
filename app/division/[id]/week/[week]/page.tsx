@@ -2,39 +2,77 @@
 
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
+import { supabase } from "@/lib/supabaseClient";
 import Link from "next/link";
-import { teamsByDivision } from "@/app/admin/UploadReplay";
+
+type Team = { name: string; abv: string; division: number };
+type Matchup = { team1: string; team2: string };
 
 export default function WeekPage() {
   const params = useParams();
   const { id: division, week } = params;
 
-  const [files, setFiles] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
+  const [matchups, setMatchups] = useState<Matchup[]>([]);
+  const [teams, setTeams] = useState<Team[]>([]);
+  const [existingFiles, setExistingFiles] = useState<string[]>([]);
 
   useEffect(() => {
-    async function fetchReplays() {
+    const loadData = async () => {
       setLoading(true);
-      try {
-        const res = await fetch(`/api/replays?division=${division}&week=${week}`);
-        if (!res.ok) throw new Error("Failed to fetch");
-        const data = await res.json();
 
-        // Strip .html to get clean file names
-        const cleanFiles = (data.files || []).map((f: string) =>
-          f.replace(".html", "")
-        );
-        setFiles(cleanFiles);
-      } catch (err) {
-        console.error(err);
-        setFiles([]);
-      } finally {
-        setLoading(false);
+      // 1️⃣ Fetch matchups for this division and week
+      const { data: matchupData, error: matchupError } = await supabase
+        .from("matchups")
+        .select("team1, team2")
+        .eq("division", division)
+        .eq("week", week);
+
+      if (matchupError || !matchupData) {
+        console.error("Failed to load matchups:", matchupError);
+        setMatchups([]);
+      } else {
+        setMatchups(matchupData);
       }
-    }
 
-    fetchReplays();
+      // 2️⃣ Fetch all teams in this division to get abbreviations
+      const { data: teamsData, error: teamsError } = await supabase
+        .from("teams")
+        .select("name, abv, division")
+        .eq("division", division);
+
+      if (teamsError || !teamsData) {
+        console.error("Failed to load teams:", teamsError);
+        setTeams([]);
+      } else {
+        setTeams(teamsData);
+      }
+
+      // 3️⃣ Check which replay files exist
+      const { data: filesData, error: filesError } = await supabase
+        .storage
+        .from("replays")
+        .list(`d${division}/w${week}`);
+
+      if (filesError || !filesData) {
+        console.warn("No files found or error:", filesError);
+        setExistingFiles([]);
+      } else {
+        setExistingFiles(filesData.map(f => f.name));
+      }
+
+      setLoading(false);
+    };
+
+    loadData();
   }, [division, week]);
+
+  const getAbv = (teamName: string) => teams.find(t => t.name === teamName)?.abv || "";
+
+  const fileExists = (team1Abv: string, team2Abv: string) => {
+    return existingFiles.includes(`${team1Abv}vs${team2Abv}.html`) ||
+           existingFiles.includes(`${team2Abv}vs${team1Abv}.html`);
+  };
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-start bg-gray-900 p-4 sm:p-6">
@@ -53,19 +91,31 @@ export default function WeekPage() {
 
       {loading ? (
         <p className="text-gray-300">Loading...</p>
-      ) : files.length === 0 ? (
-        <p className="text-gray-300">No replays uploaded yet.</p>
+      ) : matchups.length === 0 ? (
+        <p className="text-gray-300">No matchups found for this week.</p>
       ) : (
         <div className="w-full max-w-md flex flex-col gap-3">
-          {files.map((file) => (
-            <Link
-              key={file}
-              href={`/d${division}/w${week}/${file}`}
-              className="flex justify-center px-10 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold p-3 rounded-lg shadow-md text-center transition-transform transform hover:-translate-y-0.5"
-            >
-              {teamsByDivision[Number(division) as 1 | 2 | 3].find(t => t.abv === file.slice(0, 3))?.name} vs {teamsByDivision[Number(division) as 1 | 2 | 3].find(t => t.abv === file.slice(-3))?.name}
-            </Link>
-          ))}
+          {matchups.map((m, idx) => {
+            const team1Abv = getAbv(m.team1);
+            const team2Abv = getAbv(m.team2);
+            const url = `/d${division}/w${week}/${team1Abv}vs${team2Abv}`;
+            const disabled = !fileExists(team1Abv, team2Abv);
+
+            return (
+              <button
+                key={idx}
+                disabled={disabled}
+                onClick={() => !disabled && window.location.assign(url)}
+                className={`flex justify-center px-10 font-semibold p-3 rounded-lg shadow-md text-center transition-transform transform
+                  ${disabled
+                    ? "bg-gray-600 text-gray-400 cursor-not-allowed"
+                    : "bg-indigo-600 hover:bg-indigo-700 text-white hover:-translate-y-0.5 cursor-pointer"
+                  }`}
+              >
+                {m.team1} vs {m.team2}
+              </button>
+            );
+          })}
         </div>
       )}
     </div>
