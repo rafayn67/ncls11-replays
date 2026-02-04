@@ -13,7 +13,7 @@ export async function GET(req: Request) {
 
   const { data, error } = await supabase.storage
     .from("replays")
-    .download(`d${division}/w${week}/${file}.html`);
+    .download(`d${division}/${week === "playoffs" ? "playoffs" : `${week}`}/${file}.html`);
 
   if (error) return NextResponse.json({ error: error.message }, { status: 500 });
 

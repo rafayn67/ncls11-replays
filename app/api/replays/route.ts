@@ -11,7 +11,7 @@ export async function GET(req: Request) {
 
     const { data, error } = await supabase.storage
       .from("replays")
-      .list(`d${division}/w${week}`);
+      .list(`d${division}/${week === "playoffs" ? "playoffs" : `w${week}`}`);
 
     console.log("SUPABASE ERROR:", error);
     console.log("SUPABASE DATA:", data);
@@ -39,7 +39,7 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Missing file, division, or week" }, { status: 400 });
   }
 
-  const filePath = `d${division}/w${week}/${file.name}`;
+  const filePath = `d${division}/${week === "playoffs" ? "playoffs" : `w${week}`}/${file.name}`;
 
   const { error } = await supabase.storage
     .from("replays")

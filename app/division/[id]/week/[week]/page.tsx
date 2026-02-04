@@ -98,7 +98,7 @@ export default function WeekPage() {
           {matchups.map((m, idx) => {
             const team1Abv = getAbv(m.team1);
             const team2Abv = getAbv(m.team2);
-            const url = `/d${division}/w${week}/${team1Abv}vs${team2Abv}`;
+            const url = `/d${division}/${week === "playoffs" ? "playoffs" : `w${week}`}/${team1Abv}vs${team2Abv}`;
             const disabled = !fileExists(team1Abv, team2Abv);
 
             return (

@@ -8,87 +8,117 @@ const UploadReplay: React.FC = () => {
   const router = useRouter();
 
   const [division, setDivision] = useState<1 | 2 | 3>(1);
-    const [week, setWeek] = useState(Math.min(Math.max(Math.floor((new Date().getTime() - new Date("2025-12-01").getTime()) / (1000*60*60*24*7)) + 1, 1), 9) as 1|2|3|4|5|6|7|8|9);
-  const [matchup, setMatchup] = useState<{ team1: string; team2: string; team1_abv: string; team2_abv: string } | null>(null);
+  const [week, setWeek] = useState(Math.min(Math.max(Math.floor((new Date().getTime() - new Date("2025-12-01").getTime()) / (1000 * 60 * 60 * 24 * 7)) + 1, 1), 9) as 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9);
+  const [mode, setMode] = useState<"playoffs" | number>("playoffs");
   const [file, setFile] = useState<File | null>(null);
   const [matchups, setMatchups] = useState<any[]>([]);
   const [selectedMatchup, setSelectedMatchup] = useState<any>(null);
 
   useEffect(() => {
-  const loadMatchups = async () => {
-    const { data: matchupData, error: matchupError } = await supabase
-      .from("matchups")
-      .select("team1, team2")
-      .eq("division", division)
-      .eq("week", week);
+    const loadMatchups = async () => {
+      // ---------------- PLAYOFFS ----------------
+      if (mode === "playoffs") {
+        const { data: bracketGames, error } = await supabase
+          .from("bracket")
+          .select("matchup, team1, team2")
+          .eq("division", division)
+          .not("team1", "is", null)
+          .not("team2", "is", null)
+          .order("id");
 
-    if (matchupError || !matchupData) {
-      console.warn("No matchups found or error:", matchupError);
-      setMatchups([]);
-      setSelectedMatchup(null);
-      return;
-    }
+        if (error || !bracketGames) return;
 
-    // 2️⃣ Fetch all teams for the division to get abbreviations
-    const { data: teamsData, error: teamsError } = await supabase
-      .from("teams")
-      .select("name, abv")
-      .eq("division", division);
+        // get abbreviations
+        const { data: teams } = await supabase
+          .from("teams")
+          .select("name, abv")
+          .eq("division", division);
 
-    if (teamsError || !teamsData) {
-      console.warn("No teams found or error:", teamsError);
-      setMatchups([]);
-      setSelectedMatchup(null);
-      return;
-    }
+        const games = bracketGames.map(g => ({
+          matchup: g.matchup,
+          team1: g.team1,
+          team2: g.team2,
+          team1_abv: teams?.find(t => t.name === g.team1)?.abv || "",
+          team2_abv: teams?.find(t => t.name === g.team2)?.abv || ""
+        }));
 
-    // 3️⃣ Attach abbreviations to each matchup
-    const matchupWithAbv = matchupData.map(m => ({
-      ...m,
-      team1_abv: teamsData.find(t => t.name === m.team1)?.abv || "",
-      team2_abv: teamsData.find(t => t.name === m.team2)?.abv || ""
-    }));
+        setMatchups(games);
+        setSelectedMatchup(games[0] || null);
+        return;
+      }
 
-    setMatchups(matchupWithAbv);
-    setSelectedMatchup(matchupWithAbv[0] || null);
-  };
 
-  loadMatchups();
-}, [division, week]);
+      // ---------------- REGULAR SEASON ----------------
+      const { data: matchupData } = await supabase
+        .from("matchups")
+        .select("team1, team2")
+        .eq("division", division)
+        .eq("week", mode);
 
+      if (!matchupData) return;
+
+      const { data: teams } = await supabase
+        .from("teams")
+        .select("name, abv")
+        .eq("division", division);
+
+      const mapped = matchupData.map(m => ({
+        ...m,
+        team1_abv: teams?.find(t => t.name === m.team1)?.abv || "",
+        team2_abv: teams?.find(t => t.name === m.team2)?.abv || ""
+      }));
+
+      setMatchups(mapped);
+      setSelectedMatchup(mapped[0] || null);
+    };
+
+    loadMatchups();
+  }, [division, mode]);
 
   const handleUpload = async () => {
-  if (!file) return alert("Please select a replay file.");
-  if (!selectedMatchup) return alert("Matchup not found."); // ✅ use selectedMatchup here
+    if (!file) return alert("Please select a replay file.");
+    if (!selectedMatchup) return alert("Matchup not found.");
 
-  const filename = `${selectedMatchup.team1_abv}vs${selectedMatchup.team2_abv}.html`;
-  const path = `d${division}/w${week}/${filename}`;
+    const filename = `${selectedMatchup.team1_abv}vs${selectedMatchup.team2_abv}.html`;
+    const folder = mode === "playoffs" ? `d${division}/playoffs` : `d${division}/w${mode}`;
+    const path = `${folder}/${filename}`;
 
-  // Check if replay already exists (both orders)
-  const { data: exists1 } = await supabase.storage
-    .from("replays")
-    .list(`d${division}/w${week}`, { search: filename });
-  const { data: exists2 } = await supabase.storage
-    .from("replays")
-    .list(`d${division}/w${week}`, { search: `${selectedMatchup.team2_abv}vs${selectedMatchup.team1_abv}.html` });
+    // Check if replay already exists (both orders)
+    const { data: exists1 } = await supabase.storage
+      .from("replays")
+      .list(folder, { search: filename });
+    const { data: exists2 } = await supabase.storage
+      .from("replays")
+      .list(folder, { search: `${selectedMatchup.team2_abv}vs${selectedMatchup.team1_abv}.html` });
+    const alreadyExists = (exists1 && exists1.length > 0) || (exists2 && exists2.length > 0);
 
-  const alreadyExists = (exists1 && exists1.length > 0) || (exists2 && exists2.length > 0);
+    if (alreadyExists) {
+      const ok = confirm("A replay for this matchup already exists. Overwrite?");
+      if (!ok) return;
+      await supabase.storage.from("replays").remove([path]);
+    }
 
-  if (alreadyExists) {
-    const ok = confirm("A replay for this matchup already exists. Overwrite?");
-    if (!ok) return;
-    await supabase.storage.from("replays").remove([path]);
-  }
+    const { error } = await supabase.storage
+      .from("replays")
+      .upload(path, file, { cacheControl: "3600", upsert: false });
+    if (error) return alert("Upload failed.");
 
-  const { error } = await supabase.storage
-    .from("replays")
-    .upload(path, file, { cacheControl: "3600", upsert: false });
+    alert(alreadyExists ? "Replay overwritten successfully!" : "Replay uploaded successfully!");
+  };
 
-  if (error) return alert("Upload failed.");
+  const setWinner = async (winner: string) => {
+    if (!selectedMatchup) return;
 
-  alert(alreadyExists ? "Replay overwritten successfully!" : "Replay uploaded successfully!");
-};
+    const { error } = await supabase
+      .from("bracket")
+      .update({ winner })
+      .eq("division", division)
+      .eq("matchup", selectedMatchup.matchup);
 
+    if (error) return console.error("Error setting winner:", error);
+
+    alert(`${winner} set as winner!`);
+  };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-900 p-4">
@@ -99,6 +129,28 @@ const UploadReplay: React.FC = () => {
       <div className="bg-red-900/90 backdrop-blur-md rounded-2xl shadow-2xl p-8 w-full max-w-md border border-white/20">
         <h2 className="text-2xl font-bold text-white mb-6 text-center">Upload Replay</h2>
 
+        {/* PLAYOFFS WINNER BUTTONS */}
+        {mode === "playoffs" && selectedMatchup && (
+          <div className="text-center">
+            <label className="text-white font-semibold">Set Winner</label>
+            <div className="flex justify-center gap-4 mb-2">
+              <button
+                className="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg"
+                onClick={() => setWinner(selectedMatchup.team1)}
+              >
+                {selectedMatchup.team1}
+              </button>
+              <button
+                className="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg"
+                onClick={() => setWinner(selectedMatchup.team2)}
+              >
+                {selectedMatchup.team2}
+              </button>
+            </div>
+          </div>
+        )}
+
+        {/* EXISTING SELECTORS */}
         <div className="flex gap-4 mb-4">
           <label className="flex-1 text-white font-semibold">
             Division
@@ -107,41 +159,46 @@ const UploadReplay: React.FC = () => {
               onChange={(e) => setDivision(Number(e.target.value) as 1 | 2 | 3)}
               className="w-full mt-1 p-3 rounded-lg text-gray-900 font-medium focus:outline-none focus:ring-2 focus:ring-indigo-400"
             >
-              {[1,2,3].map(d => <option key={d} value={d}>D{d}</option>)}
+              {[1, 2, 3].map(d => <option key={d} value={d}>D{d}</option>)}
             </select>
           </label>
 
           <label className="flex-1 text-white font-semibold">
-            Week
+            Stage
             <select
-              value={week}
-              onChange={(e) => setWeek(Number(e.target.value) as 1|2|3|4|5|6|7|8|9)}
-              className="w-full mt-1 p-3 rounded-lg text-gray-900 font-medium focus:outline-none focus:ring-2 focus:ring-indigo-400"
+              value={mode}
+              onChange={e =>
+                setMode(e.target.value === "playoffs" ? "playoffs" : Number(e.target.value))
+              }
+              className="w-full mt-1 p-3 rounded-lg text-gray-900 font-medium"
             >
-              {[1,2,3,4,5,6,7,8,9].map(w => <option key={w} value={w}>{w}</option>)}
+              <option value="playoffs">Playoffs</option>
+              {[1, 2, 3, 4, 5, 6, 7, 8, 9].map(w =>
+                <option key={w} value={w}>Week {w}</option>
+              )}
             </select>
           </label>
         </div>
 
         {matchups.length > 0 ? (
-  <select
-    value={selectedMatchup ? `${selectedMatchup.team1}vs${selectedMatchup.team2}` : ""}
-    onChange={(e) => {
-      const [team1, team2] = e.target.value.split("vs");
-      const m = matchups.find(m => m.team1 === team1 && m.team2 === team2);
-      setSelectedMatchup(m || null);
-    }}
-    className="w-full mb-4 p-3 rounded-lg text-center text-gray-900 font-medium"
-  >
-    {matchups.map((m, idx) => (
-      <option key={idx} value={`${m.team1}vs${m.team2}`}>
-        {m.team1} vs {m.team2}
-      </option>
-    ))}
-  </select>
-) : (
-  <p className="text-gray-300 mb-4 text-center">Loading matchups...</p>
-)}
+          <select
+            value={selectedMatchup ? `${selectedMatchup.team1}vs${selectedMatchup.team2}` : ""}
+            onChange={(e) => {
+              const [team1, team2] = e.target.value.split("vs");
+              const m = matchups.find(m => m.team1 === team1 && m.team2 === team2);
+              setSelectedMatchup(m || null);
+            }}
+            className="w-full mb-4 p-3 rounded-lg text-center text-gray-900 font-medium"
+          >
+            {matchups.map((m, idx) => (
+              <option key={idx} value={`${m.team1}vs${m.team2}`}>
+                {m.team1} vs {m.team2}
+              </option>
+            ))}
+          </select>
+        ) : (
+          <p className="text-gray-300 mb-4 text-center">Loading matchups...</p>
+        )}
 
         <input
           type="file"
