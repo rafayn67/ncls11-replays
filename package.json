@@ -4,7 +4,7 @@
     "@tailwindcss/cli": "^4.1.17",
     "@tailwindcss/postcss": "^4.1.17",
     "formidable": "^3.5.4",
-    "next": "^16.0.5",
+    "next": "16.0.10",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
