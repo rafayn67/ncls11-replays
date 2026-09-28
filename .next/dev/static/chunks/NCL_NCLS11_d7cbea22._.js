@@ -18,14 +18,14 @@ function DivisionPage() {
     const id = params.id;
     const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$NCL$2f$NCLS11$2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"])();
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$NCL$2f$NCLS11$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "min-h-screen bg-gray-900 p-4 sm:p-6 flex flex-col items-center",
+        className: "min-h-screen p-4 sm:p-6 pt-20 flex flex-col items-center",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$NCL$2f$NCLS11$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "absolute top-4 left-4",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$NCL$2f$NCLS11$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                     href: `/`,
-                    className: "mb-4 px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white rounded-lg shadow-md",
-                    children: "Back"
+                    className: "btn-back",
+                    children: "← Back"
                 }, void 0, false, {
                     fileName: "[project]/NCL/NCLS11/app/division/[id]/page.tsx",
                     lineNumber: 13,
@@ -37,44 +37,53 @@ function DivisionPage() {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$NCL$2f$NCLS11$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                className: "text-3xl sm:text-4xl font-extrabold text-white mb-6",
+                className: "page-title mb-8",
                 children: [
                     "D",
                     id
                 ]
             }, void 0, true, {
                 fileName: "[project]/NCL/NCLS11/app/division/[id]/page.tsx",
-                lineNumber: 20,
+                lineNumber: 17,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$NCL$2f$NCLS11$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "px-10 w-full grid grid-cols-3 gap-4",
-                children: Array.from({
-                    length: 9
-                }, (_, i)=>i + 1).map((week)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$NCL$2f$NCLS11$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                        onClick: ()=>router.push(`/division/${id}/week/${week}`),
-                        className: "w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 rounded-lg shadow-md transition-transform transform hover:-translate-y-0.5",
-                        children: [
-                            "Week ",
-                            week
-                        ]
-                    }, week, true, {
+                className: "w-full max-w-md",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$NCL$2f$NCLS11$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "grid grid-cols-3 gap-3",
+                        children: Array.from({
+                            length: 9
+                        }, (_, i)=>i + 1).map((week)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$NCL$2f$NCLS11$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                onClick: ()=>router.push(`/division/${id}/week/${week}`),
+                                className: "btn btn-secondary py-3 hover:border-red-500",
+                                children: [
+                                    "Week ",
+                                    week
+                                ]
+                            }, week, true, {
+                                fileName: "[project]/NCL/NCLS11/app/division/[id]/page.tsx",
+                                lineNumber: 22,
+                                columnNumber: 13
+                            }, this))
+                    }, void 0, false, {
                         fileName: "[project]/NCL/NCLS11/app/division/[id]/page.tsx",
-                        lineNumber: 26,
-                        columnNumber: 11
-                    }, this))
-            }, void 0, false, {
+                        lineNumber: 20,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$NCL$2f$NCLS11$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                        onClick: ()=>router.push(`/division/${id}/playoffs`),
+                        className: "btn btn-primary w-full mt-6 py-3",
+                        children: "Playoffs"
+                    }, void 0, false, {
+                        fileName: "[project]/NCL/NCLS11/app/division/[id]/page.tsx",
+                        lineNumber: 31,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
                 fileName: "[project]/NCL/NCLS11/app/division/[id]/page.tsx",
-                lineNumber: 24,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$NCL$2f$NCLS11$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                onClick: ()=>router.push(`/division/${id}/playoffs`),
-                className: "w-1/3 mt-8 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg shadow-md transition-transform transform hover:-translate-y-0.5",
-                children: "Playoffs"
-            }, void 0, false, {
-                fileName: "[project]/NCL/NCLS11/app/division/[id]/page.tsx",
-                lineNumber: 35,
+                lineNumber: 19,
                 columnNumber: 7
             }, this)
         ]

@@ -75,24 +75,21 @@ export default function WeekPage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-start bg-gray-900 p-4 sm:p-6">
+    <div className="min-h-screen flex flex-col items-center justify-start p-4 sm:p-6 pt-20">
       <div className="absolute top-4 left-4">
-        <Link
-          href={`/division/${division}`}
-          className="mb-4 px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white rounded-lg shadow-md"
-        >
-          Back
+        <Link href={`/division/${division}`} className="btn-back">
+          ← Back
         </Link>
       </div>
 
-      <h1 className="text-3xl sm:text-4xl font-extrabold text-white mb-6 text-center">
+      <h1 className="page-title mb-8 text-center">
         D{division} W{week}
       </h1>
 
       {loading ? (
-        <p className="text-gray-300">Loading...</p>
+        <p className="text-neutral-500">Loading...</p>
       ) : matchups.length === 0 ? (
-        <p className="text-gray-300">No matchups found for this week.</p>
+        <p className="text-neutral-500">No matchups found for this week.</p>
       ) : (
         <div className="w-full max-w-md flex flex-col gap-3">
           {matchups.map((m, idx) => {
@@ -106,11 +103,7 @@ export default function WeekPage() {
                 key={idx}
                 disabled={disabled}
                 onClick={() => !disabled && window.location.assign(url)}
-                className={`flex justify-center px-10 font-semibold p-3 rounded-lg shadow-md text-center transition-transform transform
-                  ${disabled
-                    ? "bg-gray-600 text-gray-400 cursor-not-allowed"
-                    : "bg-indigo-600 hover:bg-indigo-700 text-white hover:-translate-y-0.5 cursor-pointer"
-                  }`}
+                className={`tile ${disabled ? "tile-off" : "tile-on"}`}
               >
                 {m.team1} vs {m.team2}
               </button>

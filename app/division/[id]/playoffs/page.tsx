@@ -84,70 +84,65 @@ export default function PlayoffsPage() {
       <button
         disabled={disabled}
         onClick={() => !disabled && window.location.assign(url)}
-        className={`w-full min-h-12 rounded-lg shadow p-3 grid grid-cols-[auto_1fr_auto] items-center text-white transition
-          ${
-            disabled
-              ? "bg-gray-600 text-gray-400 cursor-not-allowed"
-              : "bg-indigo-600 hover:bg-indigo-700 hover:-translate-y-0.5"
-          }`}
+        className={`tile min-h-12 !px-3 grid grid-cols-[1.5rem_1fr_1.5rem] items-center
+          ${disabled ? "tile-off" : "tile-on"}`}
       >
-        <div>{row.team1_seed ?? ""}</div>
+        <div className="text-xs font-normal text-neutral-500 text-left">{row.team1_seed ?? ""}</div>
 
         <div className="text-center">
           {row.team1 ?? ""} {row.team1 && row.team2 ? "vs" : ""} {row.team2 ?? ""}
         </div>
 
-        <div>{row.team2_seed ?? ""}</div>
+        <div className="text-xs font-normal text-neutral-500 text-right">{row.team2_seed ?? ""}</div>
       </button>
     );
   }
 
   return (
-    <div className="min-h-screen bg-gray-900 p-6">
+    <div className="min-h-screen p-4 sm:p-6 pt-20">
       <div className="absolute top-4 left-4">
-        <a
-          href={`/division/${id}`}
-          className="px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white rounded-lg shadow-md"
-        >
-          Back
+        <a href={`/division/${id}`} className="btn-back">
+          ← Back
         </a>
       </div>
 
-      <h1 className="text-3xl text-white font-bold mb-8 text-center">
+      <h1 className="page-title mb-10 text-center">
         Division {division} Playoffs
       </h1>
 
-      {/* Play-In */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 font-semibold mb-8">
-        <h2 className="text-lg text-center text-gray-300">Play-In</h2>
-        <div></div>
-        <div></div>
-        <Matchup slot="0a" />
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 font-semibold">
-
-        {/* Round 1 */}
-        <div className="space-y-3">
-          <h2 className="text-lg text-center text-gray-300">Round 1</h2>
-          <Matchup slot="1a" />
-          <Matchup slot="1b" />
-          <Matchup slot="1c" />
+      <div className="max-w-5xl mx-auto">
+        {/* Play-In */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+          <h2 className="section-title">Play-In</h2>
+          <div></div>
+          <div></div>
+          <Matchup slot="0a" />
         </div>
 
-        {/* Semis */}
-        <div className="space-y-3">
-          <h2 className="text-lg text-center text-gray-300">Semis</h2>
-          <Matchup slot="2a" />
-          <Matchup slot="2b" />
-        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-        {/* Final */}
-        <div className="space-y-3">
-          <h2 className="text-lg text-center text-gray-300">Final</h2>
-          <Matchup slot="3a" />
-        </div>
+          {/* Round 1 */}
+          <div className="space-y-3">
+            <h2 className="section-title">Round 1</h2>
+            <Matchup slot="1a" />
+            <Matchup slot="1b" />
+            <Matchup slot="1c" />
+          </div>
 
+          {/* Semis */}
+          <div className="space-y-3">
+            <h2 className="section-title">Semis</h2>
+            <Matchup slot="2a" />
+            <Matchup slot="2b" />
+          </div>
+
+          {/* Final */}
+          <div className="space-y-3">
+            <h2 className="section-title">Final</h2>
+            <Matchup slot="3a" />
+          </div>
+
+        </div>
       </div>
     </div>
   );

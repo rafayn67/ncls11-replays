@@ -12,8 +12,8 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$NCL$2f$NCLS11$2f$node_module
 ;
 ;
 const metadata = {
-    title: "NCL S11 Replays",
-    description: "View NCL Season 11 Replays",
+    title: "NCL S12 Replays",
+    description: "View NCL Season 12 Replays",
     icons: {
         icon: "/NCLDesign2025.png"
     }

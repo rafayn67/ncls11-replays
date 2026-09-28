@@ -1,181 +1,44 @@
-[00:00:02.093] Server  LOG      ✓ Ready in 1492ms
-[00:00:05.164] Server  LOG      ○ Compiling /division/[id] ...
-[00:00:09.022] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:27.187] Browser ERROR   Failed to load matchups: {"code":"","details":"TypeError: Failed to fetch\n    at http://localhost:3000/_next/static/chunks/3ebda_1984b5ab._.js:10507:23\n    at http://localhost:3000/_next/static/chunks/3ebda_1984b5ab._.js:10525:16\n    at async WeekPage.useEffect.loadData (http://localhost:3000/_next/static/chunks/NCL_NCLS11_d0f6f85c._.js:50:72)","hint":"","message":"TypeError: Failed to fetch"}
-[00:00:27.187] Browser ERROR   Failed to load matchups: {"code":"","details":"TypeError: Failed to fetch\n    at http://localhost:3000/_next/static/chunks/3ebda_1984b5ab._.js:10507:23\n    at http://localhost:3000/_next/static/chunks/3ebda_1984b5ab._.js:10525:16\n    at async WeekPage.useEffect.loadData (http://localhost:3000/_next/static/chunks/NCL_NCLS11_d0f6f85c._.js:50:72)","hint":"","message":"TypeError: Failed to fetch"}
-[00:00:27.187] Browser ERROR   Failed to load teams: {"code":"","details":"TypeError: Failed to fetch\n    at http://localhost:3000/_next/static/chunks/3ebda_1984b5ab._.js:10507:23\n    at http://localhost:3000/_next/static/chunks/3ebda_1984b5ab._.js:10525:16\n    at async WeekPage.useEffect.loadData (http://localhost:3000/_next/static/chunks/NCL_NCLS11_d0f6f85c._.js:58:68)","hint":"","message":"TypeError: Failed to fetch"}
-[00:00:27.187] Browser ERROR   Failed to load teams: {"code":"","details":"TypeError: Failed to fetch\n    at http://localhost:3000/_next/static/chunks/3ebda_1984b5ab._.js:10507:23\n    at http://localhost:3000/_next/static/chunks/3ebda_1984b5ab._.js:10525:16\n    at async WeekPage.useEffect.loadData (http://localhost:3000/_next/static/chunks/NCL_NCLS11_d0f6f85c._.js:58:68)","hint":"","message":"TypeError: Failed to fetch"}
-[00:00:27.187] Browser WARN    No files found or error: {"__isStorageError":true,"name":"StorageUnknownError","originalError":{}}
-[00:00:27.187] Browser WARN    No files found or error: {"__isStorageError":true,"name":"StorageUnknownError","originalError":{}}
-[00:00:32.604] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:01:28.920] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:01:30.844] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:06:31.082] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:06:39.803] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:06:56.967] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:07:16.612] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:09:42.487] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:09:44.534] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[03:26:40.755] Server  LOG      ✓ Compiled in 153ms
-[03:27:28.872] Server  LOG      ✓ Compiled in 90ms
-[03:27:31.465] Server  LOG      ✓ Compiled in 80ms
-[03:27:48.194] Server  LOG      ✓ Compiled in 68ms
-[03:27:52.008] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[03:27:58.036] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[03:28:10.613] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[03:28:13.739] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[03:37:16.197] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[03:55:44.239] Server  LOG      ✓ Compiled in 82ms
-[03:56:50.087] Server  LOG      ✓ Compiled in 55ms
-[03:57:09.184] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[03:57:43.751] Server  LOG      ✓ Compiled in 71ms
-[03:57:46.118] Server  LOG      ✓ Compiled in 79ms
-[03:57:48.484] Server  LOG      ✓ Compiled in 105ms
-[03:58:02.066] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[03:58:02.817] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:01:30.442] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:06:40.036] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:06:41.338] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:07:00.224] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:07:07.224] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:07:27.667] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:07:30.216] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:07:43.405] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:09:40.263] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:09:41.376] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:12:42.278] Server  LOG      ✓ Compiled in 63ms
-[04:12:45.615] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:13:39.192] Server  LOG      ✓ Compiled in 82ms
-[04:13:42.107] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:16:04.073] Server  LOG      ✓ Compiled in 104ms
-[04:16:06.125] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:16:12.312] Server  LOG      ✓ Compiled in 63ms
-[04:17:37.865] Server  LOG      ✓ Compiled in 57ms
-[04:17:43.091] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:17:45.571] Server  LOG      ✓ Compiled in 63ms
-[04:18:00.261] Server  LOG      ✓ Compiled in 134ms
-[04:18:05.411] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:18:12.991] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:18:18.785] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:20:20.339] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:20:42.135] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:21:22.689] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:21:23.408] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:21:27.087] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:21:57.943] Server  LOG      ✓ Compiled in 75ms
-[04:22:08.701] Server  LOG      ✓ Compiled in 121ms
-[04:22:16.006] Server  LOG      ✓ Compiled in 85ms
-[04:22:18.590] Server  LOG      ✓ Compiled in 62ms
-[04:22:21.944] Server  LOG      ✓ Compiled in 51ms
-[04:22:24.983] Server  LOG      ✓ Compiled in 84ms
-[04:22:26.380] Server  LOG      ✓ Compiled in 61ms
-[04:22:29.631] Server  LOG      ✓ Compiled in 60ms
-[04:22:35.176] Server  LOG      ✓ Compiled in 68ms
-[04:22:38.088] Server  LOG      ✓ Compiled in 63ms
-[04:23:13.787] Server  LOG      ✓ Compiled in 64ms
-[04:24:16.221] Server  LOG      ✓ Compiled in 63ms
-[04:24:26.188] Server  LOG      ✓ Compiled in 61ms
-[04:25:10.967] Server  LOG      ✓ Compiled in 67ms
-[04:25:18.490] Server  LOG      ✓ Compiled in 71ms
-[04:25:21.181] Server  LOG      ✓ Compiled in 84ms
-[04:25:36.173] Server  LOG      ✓ Compiled in 70ms
-[04:25:42.098] Server  LOG      ✓ Compiled in 63ms
-[04:25:44.313] Server  LOG      ✓ Compiled in 75ms
-[04:25:49.620] Server  LOG      ✓ Compiled in 134ms
-[04:25:51.918] Server  LOG      ✓ Compiled in 56ms
-[04:26:11.712] Server  LOG      ✓ Compiled in 84ms
-[04:26:15.106] Server  LOG      ✓ Compiled in 136ms
-[04:26:19.400] Server  LOG      ✓ Compiled in 75ms
-[04:26:22.851] Server  LOG      ✓ Compiled in 61ms
-[04:26:31.917] Server  LOG      ✓ Compiled in 72ms
-[04:26:35.851] Server  LOG      ✓ Compiled in 61ms
-[04:26:38.688] Server  LOG      ✓ Compiled in 63ms
-[04:26:46.478] Server  LOG      ✓ Compiled in 68ms
-[04:27:01.476] Server  LOG      ✓ Compiled in 75ms
-[04:27:04.336] Server  LOG      ✓ Compiled in 61ms
-[04:27:08.312] Server  LOG      ✓ Compiled in 63ms
-[04:30:52.575] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:36:43.570] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:36:45.471] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:38:30.268] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:39:09.419] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:39:16.500] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:39:17.247] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:39:47.213] Server  LOG      ✓ Compiled in 69ms
-[04:39:50.389] Browser ERROR   Error setting winner: {"code":"42P01","details":null,"hint":null,"message":"relation \"brackets\" does not exist"}
-[04:42:10.318] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:42:22.562] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:42:23.799] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:42:27.642] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:42:37.721] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:42:38.690] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:43:41.474] Browser ERROR   Error setting winner: {"code":"42P01","details":null,"hint":null,"message":"relation \"ranked\" does not exist"}
-[04:44:00.924] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:44:05.735] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:44:06.249] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:44:10.573] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:48:16.045] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:48:22.943] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:48:24.127] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:48:43.802] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:49:18.369] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:49:22.537] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:49:23.229] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:49:28.070] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:49:32.554] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:49:33.202] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:51:13.224] Server  LOG      ✓ Compiled in 144ms
-[04:51:16.790] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:51:32.584] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:51:39.119] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:51:40.163] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:51:43.470] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:51:58.985] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:52:09.968] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:52:22.092] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:54:25.052] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:54:32.845] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:54:33.834] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:55:04.505] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:55:28.043] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:56:14.175] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:56:27.121] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:56:30.263] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:56:31.377] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:56:51.251] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:56:54.930] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:57:06.510] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:57:07.156] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:57:22.196] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:58:32.578] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:58:53.883] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:58:54.962] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:59:00.396] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:59:03.932] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:59:07.609] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:59:08.710] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[05:00:01.688] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[05:00:02.781] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[05:00:05.168] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[05:00:22.273] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[05:00:37.110] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[05:00:41.366] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[05:01:00.082] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[05:01:01.116] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[05:01:29.494] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[05:02:21.752] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[05:02:24.721] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[05:02:28.491] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[05:02:30.434] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[05:02:31.070] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[05:04:12.048] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[05:04:34.865] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[05:04:38.597] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[05:04:39.428] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[05:04:56.792] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[05:04:57.352] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[05:05:42.488] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[05:05:46.342] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[05:05:49.665] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[05:06:04.624] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[05:06:05.435] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:07.580] Server  LOG      ✓ Ready in 4.9s
+[00:00:10.622] Server  LOG      ○ Compiling / ...
+[00:00:21.336] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:23.105] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:53.539] Browser ERROR   Failed to load matchups: {"code":"","details":"TypeError: Failed to fetch\n    at http://localhost:3000/_next/static/chunks/3ebda_1984b5ab._.js:10507:23\n    at http://localhost:3000/_next/static/chunks/3ebda_1984b5ab._.js:10525:16\n    at async WeekPage.useEffect.loadData (http://localhost:3000/_next/static/chunks/NCL_NCLS11_d0f6f85c._.js:50:72)","hint":"","message":"TypeError: Failed to fetch"}
+[00:00:53.539] Browser ERROR   Failed to load matchups: {"code":"","details":"TypeError: Failed to fetch\n    at http://localhost:3000/_next/static/chunks/3ebda_1984b5ab._.js:10507:23\n    at http://localhost:3000/_next/static/chunks/3ebda_1984b5ab._.js:10525:16\n    at async WeekPage.useEffect.loadData (http://localhost:3000/_next/static/chunks/NCL_NCLS11_d0f6f85c._.js:50:72)","hint":"","message":"TypeError: Failed to fetch"}
+[00:00:53.797] Browser ERROR   Failed to load teams: {"code":"","details":"TypeError: Failed to fetch\n    at http://localhost:3000/_next/static/chunks/3ebda_1984b5ab._.js:10507:23\n    at http://localhost:3000/_next/static/chunks/3ebda_1984b5ab._.js:10525:16\n    at async WeekPage.useEffect.loadData (http://localhost:3000/_next/static/chunks/NCL_NCLS11_d0f6f85c._.js:58:68)","hint":"","message":"TypeError: Failed to fetch"}
+[00:00:53.797] Browser ERROR   Failed to load teams: {"code":"","details":"TypeError: Failed to fetch\n    at http://localhost:3000/_next/static/chunks/3ebda_1984b5ab._.js:10507:23\n    at http://localhost:3000/_next/static/chunks/3ebda_1984b5ab._.js:10525:16\n    at async WeekPage.useEffect.loadData (http://localhost:3000/_next/static/chunks/NCL_NCLS11_d0f6f85c._.js:58:68)","hint":"","message":"TypeError: Failed to fetch"}
+[00:00:53.943] Browser WARN    No files found or error: {"__isStorageError":true,"name":"StorageUnknownError","originalError":{}}
+[00:00:53.943] Browser WARN    No files found or error: {"__isStorageError":true,"name":"StorageUnknownError","originalError":{}}
+[00:01:09.401] Browser ERROR   Failed to load matchups: {"code":"","details":"TypeError: Failed to fetch\n    at http://localhost:3000/_next/static/chunks/3ebda_1984b5ab._.js:10507:23\n    at http://localhost:3000/_next/static/chunks/3ebda_1984b5ab._.js:10525:16\n    at async WeekPage.useEffect.loadData (http://localhost:3000/_next/static/chunks/NCL_NCLS11_d0f6f85c._.js:50:72)","hint":"","message":"TypeError: Failed to fetch"}
+[00:01:09.401] Browser ERROR   Failed to load matchups: {"code":"","details":"TypeError: Failed to fetch\n    at http://localhost:3000/_next/static/chunks/3ebda_1984b5ab._.js:10507:23\n    at http://localhost:3000/_next/static/chunks/3ebda_1984b5ab._.js:10525:16\n    at async WeekPage.useEffect.loadData (http://localhost:3000/_next/static/chunks/NCL_NCLS11_d0f6f85c._.js:50:72)","hint":"","message":"TypeError: Failed to fetch"}
+[00:01:09.593] Browser ERROR   Failed to load teams: {"code":"","details":"TypeError: Failed to fetch\n    at http://localhost:3000/_next/static/chunks/3ebda_1984b5ab._.js:10507:23\n    at http://localhost:3000/_next/static/chunks/3ebda_1984b5ab._.js:10525:16\n    at async WeekPage.useEffect.loadData (http://localhost:3000/_next/static/chunks/NCL_NCLS11_d0f6f85c._.js:58:68)","hint":"","message":"TypeError: Failed to fetch"}
+[00:01:09.593] Browser ERROR   Failed to load teams: {"code":"","details":"TypeError: Failed to fetch\n    at http://localhost:3000/_next/static/chunks/3ebda_1984b5ab._.js:10507:23\n    at http://localhost:3000/_next/static/chunks/3ebda_1984b5ab._.js:10525:16\n    at async WeekPage.useEffect.loadData (http://localhost:3000/_next/static/chunks/NCL_NCLS11_d0f6f85c._.js:58:68)","hint":"","message":"TypeError: Failed to fetch"}
+[00:01:09.783] Browser WARN    No files found or error: {"__isStorageError":true,"name":"StorageUnknownError","originalError":{}}
+[00:01:09.783] Browser WARN    No files found or error: {"__isStorageError":true,"name":"StorageUnknownError","originalError":{}}
+[00:02:37.987] Server  LOG      ✓ Compiled in 254ms
+[00:03:08.469] Server  LOG      ✓ Compiled in 237ms
+[00:03:13.403] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:03:20.431] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:04:02.707] Server  LOG      ✓ Compiled in 277ms
+[00:04:30.972] Server  LOG      ✓ Compiled in 244ms
+[00:04:49.611] Server  LOG      ✓ Compiled in 266ms
+[00:05:00.897] Server  LOG      ✓ Compiled in 327ms
+[00:05:16.575] Server  LOG      ✓ Compiled in 383ms
+[00:05:22.131] Browser ERROR   Failed to load matchups: {"code":"","details":"TypeError: Failed to fetch\n    at http://localhost:3000/_next/static/chunks/3ebda_1984b5ab._.js:10507:23\n    at http://localhost:3000/_next/static/chunks/3ebda_1984b5ab._.js:10525:16\n    at async WeekPage.useEffect.loadData (http://localhost:3000/_next/static/chunks/NCL_NCLS11_d0f6f85c._.js:50:72)","hint":"","message":"TypeError: Failed to fetch"}
+[00:05:22.131] Browser ERROR   Failed to load matchups: {"code":"","details":"TypeError: Failed to fetch\n    at http://localhost:3000/_next/static/chunks/3ebda_1984b5ab._.js:10507:23\n    at http://localhost:3000/_next/static/chunks/3ebda_1984b5ab._.js:10525:16\n    at async WeekPage.useEffect.loadData (http://localhost:3000/_next/static/chunks/NCL_NCLS11_d0f6f85c._.js:50:72)","hint":"","message":"TypeError: Failed to fetch"}
+[00:05:22.290] Browser ERROR   Failed to load teams: {"code":"","details":"TypeError: Failed to fetch\n    at http://localhost:3000/_next/static/chunks/3ebda_1984b5ab._.js:10507:23\n    at http://localhost:3000/_next/static/chunks/3ebda_1984b5ab._.js:10525:16\n    at async WeekPage.useEffect.loadData (http://localhost:3000/_next/static/chunks/NCL_NCLS11_d0f6f85c._.js:58:68)","hint":"","message":"TypeError: Failed to fetch"}
+[00:05:22.290] Browser ERROR   Failed to load teams: {"code":"","details":"TypeError: Failed to fetch\n    at http://localhost:3000/_next/static/chunks/3ebda_1984b5ab._.js:10507:23\n    at http://localhost:3000/_next/static/chunks/3ebda_1984b5ab._.js:10525:16\n    at async WeekPage.useEffect.loadData (http://localhost:3000/_next/static/chunks/NCL_NCLS11_d0f6f85c._.js:58:68)","hint":"","message":"TypeError: Failed to fetch"}
+[00:05:22.431] Browser WARN    No files found or error: {"__isStorageError":true,"name":"StorageUnknownError","originalError":{}}
+[00:05:22.431] Browser WARN    No files found or error: {"__isStorageError":true,"name":"StorageUnknownError","originalError":{}}
+[00:05:33.283] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:05:34.868] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:05:40.480] Browser ERROR   Failed to load matchups: {"code":"","details":"TypeError: Failed to fetch\n    at http://localhost:3000/_next/static/chunks/3ebda_1984b5ab._.js:10507:23\n    at http://localhost:3000/_next/static/chunks/3ebda_1984b5ab._.js:10525:16\n    at async WeekPage.useEffect.loadData (http://localhost:3000/_next/static/chunks/NCL_NCLS11_d0f6f85c._.js:50:72)","hint":"","message":"TypeError: Failed to fetch"}
+[00:05:40.480] Browser ERROR   Failed to load matchups: {"code":"","details":"TypeError: Failed to fetch\n    at http://localhost:3000/_next/static/chunks/3ebda_1984b5ab._.js:10507:23\n    at http://localhost:3000/_next/static/chunks/3ebda_1984b5ab._.js:10525:16\n    at async WeekPage.useEffect.loadData (http://localhost:3000/_next/static/chunks/NCL_NCLS11_d0f6f85c._.js:50:72)","hint":"","message":"TypeError: Failed to fetch"}
+[00:05:40.638] Browser ERROR   Failed to load teams: {"code":"","details":"TypeError: Failed to fetch\n    at http://localhost:3000/_next/static/chunks/3ebda_1984b5ab._.js:10507:23\n    at http://localhost:3000/_next/static/chunks/3ebda_1984b5ab._.js:10525:16\n    at async WeekPage.useEffect.loadData (http://localhost:3000/_next/static/chunks/NCL_NCLS11_d0f6f85c._.js:58:68)","hint":"","message":"TypeError: Failed to fetch"}
+[00:05:40.638] Browser ERROR   Failed to load teams: {"code":"","details":"TypeError: Failed to fetch\n    at http://localhost:3000/_next/static/chunks/3ebda_1984b5ab._.js:10507:23\n    at http://localhost:3000/_next/static/chunks/3ebda_1984b5ab._.js:10525:16\n    at async WeekPage.useEffect.loadData (http://localhost:3000/_next/static/chunks/NCL_NCLS11_d0f6f85c._.js:58:68)","hint":"","message":"TypeError: Failed to fetch"}
+[00:05:40.797] Browser WARN    No files found or error: {"__isStorageError":true,"name":"StorageUnknownError","originalError":{}}
+[00:05:40.797] Browser WARN    No files found or error: {"__isStorageError":true,"name":"StorageUnknownError","originalError":{}}
+[00:05:47.790] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:06:00.923] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:06:24.510] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:06:46.720] Server  LOG      ✓ Compiled in 243ms
+[00:07:21.414] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold

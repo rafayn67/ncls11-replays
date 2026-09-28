@@ -121,27 +121,27 @@ const UploadReplay: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-900 p-4">
+    <div className="min-h-screen flex items-center justify-center p-4">
       <div className="absolute top-4 left-4">
-        <a href='/' className="mb-4 px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white rounded-lg shadow-md">Back</a>
+        <a href='/' className="btn-back">← Back</a>
       </div>
 
-      <div className="bg-red-900/90 backdrop-blur-md rounded-2xl shadow-2xl p-8 w-full max-w-md border border-white/20">
+      <div className="card p-8 w-full max-w-md">
         <h2 className="text-2xl font-bold text-white mb-6 text-center">Upload Replay</h2>
 
         {/* PLAYOFFS WINNER BUTTONS */}
         {mode === "playoffs" && selectedMatchup && (
-          <div className="text-center">
-            <label className="text-white font-semibold">Set Winner</label>
-            <div className="flex justify-center gap-4 mb-2">
+          <div className="text-center mb-6">
+            <label className="label mb-2">Set Winner</label>
+            <div className="grid grid-cols-2 gap-3">
               <button
-                className="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg"
+                className="btn btn-secondary hover:border-red-500"
                 onClick={() => setWinner(selectedMatchup.team1)}
               >
                 {selectedMatchup.team1}
               </button>
               <button
-                className="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg"
+                className="btn btn-secondary hover:border-red-500"
                 onClick={() => setWinner(selectedMatchup.team2)}
               >
                 {selectedMatchup.team2}
@@ -152,25 +152,25 @@ const UploadReplay: React.FC = () => {
 
         {/* EXISTING SELECTORS */}
         <div className="flex gap-4 mb-4">
-          <label className="flex-1 text-white font-semibold">
+          <label className="flex-1 label">
             Division
             <select
               value={division}
               onChange={(e) => setDivision(Number(e.target.value) as 1 | 2 | 3)}
-              className="w-full mt-1 p-3 rounded-lg text-gray-900 font-medium focus:outline-none focus:ring-2 focus:ring-indigo-400"
+              className="field mt-1.5 normal-case tracking-normal text-base font-medium"
             >
               {[1, 2, 3].map(d => <option key={d} value={d}>D{d}</option>)}
             </select>
           </label>
 
-          <label className="flex-1 text-white font-semibold">
+          <label className="flex-1 label">
             Stage
             <select
               value={mode}
               onChange={e =>
                 setMode(e.target.value === "playoffs" ? "playoffs" : Number(e.target.value))
               }
-              className="w-full mt-1 p-3 rounded-lg text-gray-900 font-medium"
+              className="field mt-1.5 normal-case tracking-normal text-base font-medium"
             >
               <option value="playoffs">Playoffs</option>
               {[1, 2, 3, 4, 5, 6, 7, 8, 9].map(w =>
@@ -188,7 +188,7 @@ const UploadReplay: React.FC = () => {
               const m = matchups.find(m => m.team1 === team1 && m.team2 === team2);
               setSelectedMatchup(m || null);
             }}
-            className="w-full mb-4 p-3 rounded-lg text-center text-gray-900 font-medium"
+            className="field mb-4 text-center font-medium"
           >
             {matchups.map((m, idx) => (
               <option key={idx} value={`${m.team1}vs${m.team2}`}>
@@ -197,20 +197,17 @@ const UploadReplay: React.FC = () => {
             ))}
           </select>
         ) : (
-          <p className="text-gray-300 mb-4 text-center">Loading matchups...</p>
+          <p className="text-neutral-500 mb-4 text-center">Loading matchups...</p>
         )}
 
         <input
           type="file"
           accept=".html"
           onChange={(e) => setFile(e.target.files?.[0] || null)}
-          className="flex justify-center mb-6 text-white font-bold"
+          className="block w-full mb-6 text-sm text-neutral-400 file:mr-4 file:rounded-lg file:border-0 file:bg-neutral-800 file:px-4 file:py-2.5 file:text-sm file:font-semibold file:text-neutral-100 hover:file:bg-neutral-700 file:cursor-pointer"
         />
 
-        <button
-          onClick={handleUpload}
-          className="w-full bg-indigo-600 hover:bg-indigo-700 text-white p-3 rounded-lg font-semibold shadow-md transition-transform transform hover:-translate-y-1"
-        >
+        <button onClick={handleUpload} className="btn btn-primary w-full py-3">
           Upload Replay
         </button>
       </div>
@@ -218,7 +215,7 @@ const UploadReplay: React.FC = () => {
       <div className="absolute top-4 right-4 flex gap-2">
         <button
           onClick={() => { localStorage.removeItem("staffLoggedIn"); router.push("/"); }}
-          className="px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white rounded-lg shadow-md"
+          className="btn btn-secondary"
         >
           Sign Out
         </button>

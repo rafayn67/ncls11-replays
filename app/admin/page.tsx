@@ -40,8 +40,11 @@ export default function UploadPage() {
 
   if (!loggedIn)
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center bg-gray-900 p-4">
-        <div className="bg-red-900/90 backdrop-blur-md rounded-2xl shadow-2xl p-8 w-full max-w-md text-center border border-white/20">
+      <div className="min-h-screen flex flex-col items-center justify-center p-4">
+        <div className="absolute top-4 left-4">
+          <a href="/" className="btn-back">← Back</a>
+        </div>
+        <div className="card p-8 w-full max-w-md text-center">
           <h2 className="text-2xl font-bold text-white mb-6">NCL Mod Login</h2>
 
           <input
@@ -49,13 +52,10 @@ export default function UploadPage() {
             placeholder="Enter staff password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="w-full p-3 rounded-lg mb-4 text-gray-900 font-medium focus:outline-none focus:ring-2 focus:ring-indigo-400"
+            className="field mb-4"
           />
 
-          <button
-            onClick={handleLogin}
-            className="w-full bg-indigo-600 hover:bg-indigo-700 text-white p-3 rounded-lg font-semibold shadow-md transition-transform transform hover:-translate-y-1"
-          >
+          <button onClick={handleLogin} className="btn btn-primary w-full py-3">
             Log in
           </button>
         </div>
@@ -63,12 +63,9 @@ export default function UploadPage() {
     );
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-900 p-4">
+    <div className="min-h-screen flex flex-col items-center justify-center p-4">
       <div className="absolute top-4 right-4">
-        <button
-          onClick={handleLogout}
-          className="px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white rounded-lg shadow-md"
-        >
+        <button onClick={handleLogout} className="btn btn-secondary">
           Sign Out
         </button>
       </div>
