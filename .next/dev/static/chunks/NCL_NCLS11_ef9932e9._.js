@@ -18,17 +18,17 @@ const divisions = [
     {
         id: "1",
         label: "D1",
-        sprite: "https://play.pokemonshowdown.com/sprites/gen5ani/azelf.gif"
+        sprite: "/lucario.gif"
     },
     {
         id: "2",
         label: "D2",
-        sprite: "https://play.pokemonshowdown.com/sprites/gen5ani/mesprit.gif"
+        sprite: "/absol.gif"
     },
     {
         id: "3",
         label: "D3",
-        sprite: "https://play.pokemonshowdown.com/sprites/gen5ani/uxie.gif"
+        sprite: "/garchomp.gif"
     }
 ];
 function Home() {

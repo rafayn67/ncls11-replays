@@ -1,6 +1,6 @@
 {
+  "/[division]/[week]/[file]/page": "app/[division]/[week]/[file]/page.js",
   "/division/[id]/page": "app/division/[id]/page.js",
-  "/division/[id]/playoffs/page": "app/division/[id]/playoffs/page.js",
   "/division/[id]/week/[week]/page": "app/division/[id]/week/[week]/page.js",
   "/page": "app/page.js"
 }

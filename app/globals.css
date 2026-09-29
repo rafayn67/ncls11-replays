@@ -6,11 +6,12 @@
   html {
     color-scheme: dark;
   }
+
   body {
-    @apply bg-neutral-950 text-neutral-100 antialiased;
-    background-image: radial-gradient(ellipse 70% 45% at 50% 0%, rgba(220, 38, 38, 0.14), transparent);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    @apply bg-[#150725] text-neutral-100 antialiased;
+    background-image: radial-gradient(ellipse 70% 45% at 50% 0%,
+        rgba(255, 106, 0, 0.057),
+        transparent);
   }
 }
 
@@ -22,12 +23,15 @@
   .btn {
     @apply inline-flex items-center justify-center rounded-lg px-4 py-2.5 text-sm font-semibold transition disabled:cursor-not-allowed;
   }
+
   .btn-primary {
     @apply bg-red-600 text-white hover:bg-red-500 active:bg-red-700;
   }
+
   .btn-secondary {
     @apply bg-neutral-800 text-neutral-100 border border-neutral-700 hover:bg-neutral-700;
   }
+
   .btn-back {
     @apply inline-flex items-center gap-1 rounded-lg px-3 py-2 text-sm text-neutral-400 transition hover:bg-neutral-800 hover:text-white;
   }
@@ -35,6 +39,7 @@
   .field {
     @apply w-full rounded-lg bg-neutral-950 border border-neutral-800 px-3 py-2.5 text-neutral-100 focus:outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500;
   }
+
   .label {
     @apply block text-xs font-medium uppercase tracking-wide text-neutral-400;
   }
@@ -42,9 +47,11 @@
   .tile {
     @apply w-full rounded-lg border px-4 py-3 text-center font-semibold transition;
   }
+
   .tile-on {
     @apply bg-neutral-900 border-neutral-700 text-white hover:border-red-500 hover:bg-neutral-800 cursor-pointer;
   }
+
   .tile-off {
     @apply bg-neutral-900/40 border-neutral-800 text-neutral-600 cursor-not-allowed;
   }
@@ -52,6 +59,7 @@
   .page-title {
     @apply text-3xl sm:text-4xl font-bold tracking-tight text-white;
   }
+
   .section-title {
     @apply text-xs font-medium uppercase tracking-wide text-neutral-400 text-center;
   }

@@ -34,7 +34,7 @@ function ReplayPage() {
     ]);
     if (!iframeSrc) {
         return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$NCL$2f$NCLS11$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-            className: "text-gray-300 text-center mt-10",
+            className: "text-neutral-500 text-center mt-10",
             children: "Invalid replay URL"
         }, void 0, false, {
             fileName: "[project]/NCL/NCLS11/app/[division]/[week]/[file]/page.tsx",
@@ -43,14 +43,14 @@ function ReplayPage() {
         }, this);
     }
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$NCL$2f$NCLS11$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "w-full h-screen relative",
+        className: "w-full h-screen relative bg-neutral-950",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$NCL$2f$NCLS11$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "absolute top-4 left-4 z-10",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$NCL$2f$NCLS11$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$NCL$2f$NCLS11$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                     href: `/division/${division.slice(1)}/${stage === "playoffs" ? "playoffs" : `/week/${stage?.slice(1)}`}`,
-                    className: "px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white rounded-lg shadow-md",
-                    children: "Back"
+                    className: "btn-back bg-neutral-900/80 backdrop-blur border border-neutral-800 shadow-lg",
+                    children: "← Back"
                 }, void 0, false, {
                     fileName: "[project]/NCL/NCLS11/app/[division]/[week]/[file]/page.tsx",
                     lineNumber: 35,
