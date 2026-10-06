@@ -39,6 +39,23 @@ function DivisionPage() {
     const params = (0, __TURBOPACK__imported__module__$5b$project$5d2f$NCL$2f$NCLS11$2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useParams"])();
     const id = params.id;
     const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$NCL$2f$NCLS11$2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRouter"])();
+    const divisions = [
+        {
+            id: "1",
+            label: "D1",
+            sprite: "/lucario.gif"
+        },
+        {
+            id: "2",
+            label: "D2",
+            sprite: "/absol.gif"
+        },
+        {
+            id: "3",
+            label: "D3",
+            sprite: "/garchomp.gif"
+        }
+    ];
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$NCL$2f$NCLS11$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "min-h-screen p-4 sm:p-6 pt-20 flex flex-col items-center",
         children: [
@@ -50,23 +67,48 @@ function DivisionPage() {
                     children: "← Back"
                 }, void 0, false, {
                     fileName: "[project]/NCL/NCLS11/app/division/[id]/page.tsx",
-                    lineNumber: 13,
+                    lineNumber: 19,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/NCL/NCLS11/app/division/[id]/page.tsx",
-                lineNumber: 12,
+                lineNumber: 18,
                 columnNumber: 7
             }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$NCL$2f$NCLS11$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                className: "page-title mb-8",
-                children: [
-                    "D",
-                    id
-                ]
-            }, void 0, true, {
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$NCL$2f$NCLS11$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "flex items-center justify-center mb-8 border-b bg-gray-50/5 border-gray-800/20 p-4 pt-0  rounded-lg",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$NCL$2f$NCLS11$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "relative w-24 h-24",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$NCL$2f$NCLS11$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                            src: divisions.find((d)=>d.id === id)?.sprite,
+                            alt: `D${id}`,
+                            className: "w-24 h-24 object-contain"
+                        }, void 0, false, {
+                            fileName: "[project]/NCL/NCLS11/app/division/[id]/page.tsx",
+                            lineNumber: 25,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$NCL$2f$NCLS11$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
+                            className: "absolute left-1/2 -translate-x-1/2 bottom-[-8px] text-4xl font-bold z-10",
+                            children: [
+                                "D",
+                                id
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/NCL/NCLS11/app/division/[id]/page.tsx",
+                            lineNumber: 31,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/NCL/NCLS11/app/division/[id]/page.tsx",
+                    lineNumber: 24,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
                 fileName: "[project]/NCL/NCLS11/app/division/[id]/page.tsx",
-                lineNumber: 17,
+                lineNumber: 23,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$NCL$2f$NCLS11$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -85,33 +127,32 @@ function DivisionPage() {
                                 ]
                             }, week, true, {
                                 fileName: "[project]/NCL/NCLS11/app/division/[id]/page.tsx",
-                                lineNumber: 22,
+                                lineNumber: 41,
                                 columnNumber: 13
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/NCL/NCLS11/app/division/[id]/page.tsx",
-                        lineNumber: 20,
+                        lineNumber: 39,
                         columnNumber: 9
                     }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$NCL$2f$NCLS11$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                        onClick: ()=>router.push(`/division/${id}/playoffs`),
-                        className: "btn btn-primary w-full mt-6 py-3",
-                        children: "Playoffs"
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$NCL$2f$NCLS11$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                        className: "text-center text-neutral-500 font-light mt-6",
+                        children: "Playoffs coming soon!"
                     }, void 0, false, {
                         fileName: "[project]/NCL/NCLS11/app/division/[id]/page.tsx",
-                        lineNumber: 31,
+                        lineNumber: 50,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/NCL/NCLS11/app/division/[id]/page.tsx",
-                lineNumber: 19,
+                lineNumber: 38,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/NCL/NCLS11/app/division/[id]/page.tsx",
-        lineNumber: 11,
+        lineNumber: 17,
         columnNumber: 5
     }, this);
 }

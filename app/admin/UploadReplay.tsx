@@ -135,13 +135,13 @@ const UploadReplay: React.FC = () => {
             <label className="label mb-2">Set Winner</label>
             <div className="grid grid-cols-2 gap-3">
               <button
-                className="btn btn-secondary hover:border-red-500"
+                className="btn btn-secondary hover:border-orange-500"
                 onClick={() => setWinner(selectedMatchup.team1)}
               >
                 {selectedMatchup.team1}
               </button>
               <button
-                className="btn btn-secondary hover:border-red-500"
+                className="btn btn-secondary hover:border-orange-500"
                 onClick={() => setWinner(selectedMatchup.team2)}
               >
                 {selectedMatchup.team2}
@@ -164,7 +164,7 @@ const UploadReplay: React.FC = () => {
           </label>
 
           <label className="flex-1 label">
-            Stage
+            Week
             <select
               value={mode}
               onChange={e =>

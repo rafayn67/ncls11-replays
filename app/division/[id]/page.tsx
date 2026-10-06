@@ -7,6 +7,12 @@ export default function DivisionPage() {
   const id = params.id;
   const router = useRouter();
 
+  const divisions = [
+    { id: "1", label: "D1", sprite: "/lucario.gif" },
+    { id: "2", label: "D2", sprite: "/absol.gif" },
+    { id: "3", label: "D3", sprite: "/garchomp.gif" },
+  ];
+
   return (
     <div className="min-h-screen p-4 sm:p-6 pt-20 flex flex-col items-center">
       <div className="absolute top-4 left-4">
@@ -14,7 +20,20 @@ export default function DivisionPage() {
           ← Back
         </a>
       </div>
-      <h1 className="page-title mb-8">D{id}</h1>
+      <div className="flex items-center justify-center mb-8 border-b bg-gray-50/5 border-gray-800/20 p-4 pt-0  rounded-lg">
+        <div className="relative w-24 h-24">
+          <img
+            src={divisions.find(d => d.id === id)?.sprite}
+            alt={`D${id}`}
+            className="w-24 h-24 object-contain"
+          />
+
+          <h1 className="absolute left-1/2 -translate-x-1/2 bottom-[-8px] text-4xl font-bold z-10">
+            D{id}
+          </h1>
+        </div>
+      </div>
+
 
       <div className="w-full max-w-md">
         <div className="grid grid-cols-3 gap-3">
@@ -28,12 +47,15 @@ export default function DivisionPage() {
             </button>
           ))}
         </div>
-        <button
+        <p className="text-center text-neutral-500 font-light mt-6">
+          Playoffs coming soon!
+        </p>
+        {/* <button
           onClick={() => router.push(`/division/${id}/playoffs`)}
           className="btn btn-primary w-full mt-6 py-3"
         >
           Playoffs
-        </button>
+        </button> */}
       </div>
     </div>
   );

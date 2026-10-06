@@ -52,6 +52,14 @@ export default function Home() {
           </button>
         </div>
       </div>
+      <a
+        href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-3 right-4 text-[8px] text-neutral-700"
+      >
+        psst
+      </a>
     </div>
   );
 }
