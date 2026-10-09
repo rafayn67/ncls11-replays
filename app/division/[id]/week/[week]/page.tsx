@@ -105,9 +105,10 @@ export default function WeekPage() {
               <div className="flex items-center gap-3" key={idx}>
                 <img
                   className="w-16 h-16"
-                  src={`/avatars/${m.team1}.png`}
+                  src={`/avatars/${m.team1.toLowerCase()}.png`}
                   onError={(e) => {
                     e.currentTarget.src = avatarFallback1;
+                    console.warn(`Avatar not found for ${m.team1}, using fallback.`);
                   }}
                 />
                 <button
@@ -120,9 +121,10 @@ export default function WeekPage() {
                 </button>
                 <img
                   className="w-16 h-16"
-                  src={`/avatars/${m.team2}.png`}
+                  src={`/avatars/${m.team2.toLowerCase()}.png`}
                   onError={(e) => {
                     e.currentTarget.src = avatarFallback2;
+                    console.warn(`Avatar not found for ${m.team2}, using fallback.`);
                   }}
                 />
               </div>

@@ -473,16 +473,8 @@ body {
   position: relative;
 }
 
-.left-4 {
-  left: 1rem;
-}
-
-.right-4 {
-  right: 1rem;
-}
-
-.top-4 {
-  top: 1rem;
+.bottom-3 {
+  bottom: .75rem;
 }
 
 .bottom-\[-8px\] {
@@ -493,28 +485,16 @@ body {
   left: 50%;
 }
 
-.bottom-\[-9px\] {
-  bottom: -9px;
+.left-4 {
+  left: 1rem;
 }
 
-.bottom-\[-12px\] {
-  bottom: -12px;
+.right-4 {
+  right: 1rem;
 }
 
-.bottom-\[-0px\] {
-  bottom: 0;
-}
-
-.bottom-\[-3px\] {
-  bottom: -3px;
-}
-
-.bottom-\[-6px\] {
-  bottom: -6px;
-}
-
-.bottom-3 {
-  bottom: .75rem;
+.top-4 {
+  top: 1rem;
 }
 
 .z-10 {
@@ -566,10 +546,6 @@ body {
   margin-top: 1.5rem;
 }
 
-.mr-2 {
-  margin-right: .5rem;
-}
-
 .block {
   display: block;
 }
@@ -586,24 +562,20 @@ body {
   height: 3rem;
 }
 
-.h-full {
-  height: 100%;
-}
-
-.h-screen {
-  height: 100vh;
+.h-16 {
+  height: 4rem;
 }
 
 .h-24 {
   height: 6rem;
 }
 
-.h-6 {
-  height: 1.5rem;
+.h-full {
+  height: 100%;
 }
 
-.h-16 {
-  height: 4rem;
+.h-screen {
+  height: 100vh;
 }
 
 .min-h-12 {
@@ -618,20 +590,16 @@ body {
   width: 3rem;
 }
 
-.w-full {
-  width: 100%;
+.w-16 {
+  width: 4rem;
 }
 
 .w-24 {
   width: 6rem;
 }
 
-.w-6 {
-  width: 1.5rem;
-}
-
-.w-16 {
-  width: 4rem;
+.w-full {
+  width: 100%;
 }
 
 .max-w-5xl {
@@ -709,12 +677,12 @@ body {
   margin-bottom: calc(.75rem * var(--tw-space-y-reverse));
 }
 
-.rounded-xl {
-  border-radius: .75rem;
-}
-
 .rounded-lg {
   border-radius: .5rem;
+}
+
+.rounded-xl {
+  border-radius: .75rem;
 }
 
 .border {
@@ -723,6 +691,10 @@ body {
 
 .border-b {
   border-bottom-width: 1px;
+}
+
+.border-gray-800\/20 {
+  border-color: #1f293733;
 }
 
 .border-neutral-800 {
@@ -735,8 +707,8 @@ body {
   border-color: rgb(239 68 68 / var(--tw-border-opacity));
 }
 
-.border-gray-800\/20 {
-  border-color: #1f293733;
+.bg-gray-50\/5 {
+  background-color: #f9fafb0d;
 }
 
 .bg-neutral-900\/80 {
@@ -750,14 +722,6 @@ body {
 
 .bg-red-500\/10 {
   background-color: #ef44441a;
-}
-
-.bg-inherit {
-  background-color: inherit;
-}
-
-.bg-gray-50\/5 {
-  background-color: #f9fafb0d;
 }
 
 .object-contain {
@@ -787,16 +751,12 @@ body {
   padding-bottom: .75rem;
 }
 
-.pt-20 {
-  padding-top: 5rem;
-}
-
-.pb-4 {
-  padding-bottom: 1rem;
-}
-
 .pt-0 {
   padding-top: 0;
+}
+
+.pt-20 {
+  padding-top: 5rem;
 }
 
 .text-left {
@@ -816,6 +776,15 @@ body {
   line-height: 2rem;
 }
 
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.text-\[8px\] {
+  font-size: 8px;
+}
+
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -829,19 +798,6 @@ body {
 .text-xs {
   font-size: .75rem;
   line-height: 1rem;
-}
-
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-
-.text-\[10px\] {
-  font-size: 10px;
-}
-
-.text-\[8px\] {
-  font-size: 8px;
 }
 
 .font-bold {
@@ -882,14 +838,14 @@ body {
   color: rgb(115 115 115 / var(--tw-text-opacity));
 }
 
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
 .text-neutral-700 {
   --tw-text-opacity: 1;
   color: rgb(64 64 64 / var(--tw-text-opacity));
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .shadow-lg {
@@ -910,12 +866,6 @@ body {
 
 .transition {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter, backdrop-filter;
-  transition-duration: .15s;
-  transition-timing-function: cubic-bezier(.4, 0, .2, 1);
-}
-
-.transition-colors {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
   transition-duration: .15s;
   transition-timing-function: cubic-bezier(.4, 0, .2, 1);
 }
@@ -985,11 +935,6 @@ body {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.hover\:text-neutral-400:hover {
-  --tw-text-opacity: 1;
-  color: rgb(163 163 163 / var(--tw-text-opacity));
-}
-
 .hover\:file\:bg-neutral-700::file-selector-button:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(64 64 64 / var(--tw-bg-opacity));
@@ -1004,24 +949,8 @@ body {
     height: 4rem;
   }
 
-  .sm\:h-32 {
-    height: 8rem;
-  }
-
-  .sm\:h-24 {
-    height: 6rem;
-  }
-
   .sm\:w-16 {
     width: 4rem;
-  }
-
-  .sm\:w-32 {
-    width: 8rem;
-  }
-
-  .sm\:w-24 {
-    width: 6rem;
   }
 
   .sm\:p-10 {
