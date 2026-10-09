@@ -71,7 +71,7 @@ export default function WeekPage() {
 
   const fileExists = (team1Abv: string, team2Abv: string) => {
     return existingFiles.includes(`${team1Abv}vs${team2Abv}.html`) ||
-           existingFiles.includes(`${team2Abv}vs${team1Abv}.html`);
+      existingFiles.includes(`${team2Abv}vs${team1Abv}.html`);
   };
 
   return (
@@ -98,15 +98,34 @@ export default function WeekPage() {
             const url = `/d${division}/${week === "playoffs" ? "playoffs" : `w${week}`}/${team1Abv}vs${team2Abv}`;
             const disabled = !fileExists(team1Abv, team2Abv);
 
+            const avatarFallback1 = "https://play.pokemonshowdown.com/sprites/trainers/unknown-flipped.png";
+            const avatarFallback2 = "https://play.pokemonshowdown.com/sprites/trainers/unknown.png";
+
             return (
-              <button
-                key={idx}
-                disabled={disabled}
-                onClick={() => !disabled && window.location.assign(url)}
-                className={`tile ${disabled ? "tile-off" : "tile-on"}`}
-              >
-                {m.team1} vs {m.team2}
-              </button>
+              <div className="flex items-center gap-3" key={idx}>
+                <img
+                  className="w-16 h-16"
+                  src={`/avatars/${m.team1}.png`}
+                  onError={(e) => {
+                    e.currentTarget.src = avatarFallback1;
+                  }}
+                />
+                <button
+                  key={idx}
+                  disabled={disabled}
+                  onClick={() => !disabled && window.location.assign(url)}
+                  className={`tile ${disabled ? "tile-off" : "tile-on"}`}
+                >
+                  {m.team1} vs {m.team2}
+                </button>
+                <img
+                  className="w-16 h-16"
+                  src={`/avatars/${m.team2}.png`}
+                  onError={(e) => {
+                    e.currentTarget.src = avatarFallback2;
+                  }}
+                />
+              </div>
             );
           })}
         </div>

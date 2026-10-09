@@ -566,6 +566,10 @@ body {
   margin-top: 1.5rem;
 }
 
+.mr-2 {
+  margin-right: .5rem;
+}
+
 .block {
   display: block;
 }
@@ -594,6 +598,14 @@ body {
   height: 6rem;
 }
 
+.h-6 {
+  height: 1.5rem;
+}
+
+.h-16 {
+  height: 4rem;
+}
+
 .min-h-12 {
   min-height: 3rem;
 }
@@ -612,6 +624,14 @@ body {
 
 .w-24 {
   width: 6rem;
+}
+
+.w-6 {
+  width: 1.5rem;
+}
+
+.w-16 {
+  width: 4rem;
 }
 
 .max-w-5xl {
